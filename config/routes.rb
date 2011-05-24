@@ -1,5 +1,14 @@
 TKComRails::Application.routes.draw do
+  devise_for :users,  :controllers => { :registrations => "users/registrations" }
+
+  devise_scope :user do
+      get "logout", :to => "devise/sessions#destroy"
+  end
+
   resources :posts
+  
+  root :to => "home#index"
+  
   get "projects/new"
 
   match '/new_post', :to => 'posts#new'

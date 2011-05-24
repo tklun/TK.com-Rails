@@ -13,6 +13,7 @@
 #
 
 class Post < ActiveRecord::Base
+  # before_filter :authenticate_user!, :except => [:show, :index]
   attr_accessible :headline, :content, :image_path, :tag
   
   validates :headline, :presence => true
