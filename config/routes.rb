@@ -1,4 +1,9 @@
 TKComRails::Application.routes.draw do
+  resources :posts
+  get "projects/new"
+
+  match '/new_post', :to => 'posts#new'
+
   get "pages/about"
 
   # The priority is based upon order of creation:
