@@ -16,6 +16,8 @@ class Post < ActiveRecord::Base
   attr_accessible :headline, :content, :image_path, :tag
   
   validates :headline, :presence => true
+  validates :content, :presence => true
+  validates :tag, :presence => true
 
   has_many :tags
 end

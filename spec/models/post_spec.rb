@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Post do
   before(:each) do
-    @attr = {:headline => "Test headline"}
+    @attr = {:headline => "Test headline", :content => "I'm the content", :tag => "Test"}
   end
   
   it "should create a instance of Post with included attributes" do

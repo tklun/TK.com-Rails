@@ -1,2 +1,24 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<h1>Create New Post</h1>
+
+<%= form_for(@post) do |p| %>
+	<%= render 'shared/error_messages' %>
+	<div class="field">
+	<%= p.label :headline %><br />
+	<%= p.text_field :headline %>
+	</div>
+	<div class="field">
+	<%= p.label :content %><br />
+	<%= p.text_area :content %>
+	</div>
+	<div class="field">
+	<%= p.label :image_path %><br />
+	<%= p.text_field :image_path %>
+	</div>
+	<div class="field">
+	<%= p.label :tag %><br />
+	<%= p.text_field :tag %>
+	</div>
+	<div class="actions">
+	<%= p.submit "Create Post" %>
+	</div>
+<% end%>
