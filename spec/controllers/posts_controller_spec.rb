@@ -24,7 +24,8 @@ describe PostsController do
       before(:each) do
         @user = Factory(:user)
       end
-      it "should be unauthenticated" do
+      it "should be redirected to sign in" do
+        # response.should be_redirect
         # it "should be successful" do
         #   get :new
         #   response.should be_success
@@ -33,7 +34,7 @@ describe PostsController do
         # it "should have the right title" do
         #   get :new
         #   response.should have_selector("title", :content => "New Post")
-        # end      
+        # end
       end
     end
   end
@@ -86,6 +87,9 @@ describe PostsController do
           lambda do
             post :create, :post => @attr
           end.should_not change(Post, :count)
+        end
+        it "should be redirected to sign in" do
+          # response.should be_redirect
         end
       end
     end

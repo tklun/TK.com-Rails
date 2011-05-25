@@ -13,4 +13,14 @@ describe ProjectsController do
     end
   end
 
+  describe "GET 'new' not authenticated" do
+    before(:each) do
+      @user = Factory(:user)
+    end
+    it "should be successful" do
+      get 'new'
+      response.should_not be_success
+    end
+  end
+
 end
