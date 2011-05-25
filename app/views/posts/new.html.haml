@@ -1,0 +1,21 @@
+%h1 Create New Post
+= form_for(@post) do |p|
+  = render 'shared/error_messages', :object => p.object
+  .field
+    = p.label :headline
+    %br
+    = p.text_field :headline
+  .field
+    = p.label :content
+    %br
+    = p.text_area :content
+  .field
+    = p.label :image_path
+    %br
+    = p.text_field :image_path
+  .field
+    = p.label :tag
+    %br
+    = p.text_field :tag
+  .actions
+    = p.submit "Create Post"

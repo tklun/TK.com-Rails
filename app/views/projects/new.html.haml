@@ -1,0 +1,25 @@
+%h1 Create New Portfolio Item
+= form_for(@project) do |p|
+	= render 'shared/error_messages', :object => p.object
+	.field
+		= p.label :headline
+		%br
+		= p.text_field :headline
+	.field
+		= p.label :details
+		%br
+		= p.text_area :details
+	.field
+		= p.label :client
+		%br
+		= p.text_field :client
+	.field
+		= p.label :client_type
+		%br
+		= p.text_field :client_type
+	.field
+		= p.label :role
+		%br
+		= p.text_field :role
+	.actions
+		= p.submit "Create Project"

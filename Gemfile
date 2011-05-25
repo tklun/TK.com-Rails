@@ -12,7 +12,9 @@ gem 'will_paginate', '3.0.pre2'
 gem 'devise'
 gem "cancan"
 
+# Code Helpers
 gem 'haml'
+gem 'formtastic'
 
 group :development do
 	gem 'rspec-rails', '2.5.0'
