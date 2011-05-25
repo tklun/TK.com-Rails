@@ -16,6 +16,6 @@
   .field
     = p.label :tag
     %br
-    = p.text_field :tag
+    = select("post", "tag", Tag.all.collect {|t| [ t.tag_name, t.id ] })
   .actions
     = p.submit "Create Post"

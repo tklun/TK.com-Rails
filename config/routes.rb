@@ -7,7 +7,8 @@ TKComRails::Application.routes.draw do
 
   resources :posts
   resources :projects
-  
+  resources :tags
+    
   root :to => "home#index"
   
   # get "projects/new"

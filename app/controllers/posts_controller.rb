@@ -9,6 +9,7 @@ class PostsController < ApplicationController
   def show #Show individual posts
     @post = Post.find(params[:id])
     @title = @post.headline
+    @tag_text = get_tag(@post)
   end
   
   def new
@@ -32,6 +33,15 @@ class PostsController < ApplicationController
   
   def destroy
   
+  end
+  
+  def get_tags
+    @tags = Tag.all
+  end
+
+  def get_tag(post)
+    @tag_id = post.tag
+    @tag = Tag.find(@tag_id)
   end
 
 end
