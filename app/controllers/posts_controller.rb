@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 
   def index #Show all posts
     @title = "Posts"
+    @posts = Post.all
   end
 
   def show #Show individual posts
