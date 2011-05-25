@@ -14,4 +14,10 @@
 #
 
 class Project < ActiveRecord::Base
+  attr_accessible :headline, :details, :client, :client_type, :role
+  
+  validates :headline, :presence => true
+  validates :details, :presence => true
+  validates :role, :presence => true
+
 end

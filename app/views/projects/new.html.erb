@@ -1,2 +1,27 @@
-<h1>Projects#new</h1>
-<p>Find me in app/views/projects/new.html.erb</p>
+<h1>Create New Portfolio Item</h1>
+
+<%= form_for(@project) do |p| %>
+<%= error_messages_for :project %>	<div class="field">
+	<%= p.label :headline %><br />
+	<%= p.text_field :headline %>
+	</div>
+	<div class="field">
+	<%= p.label :details %><br />
+	<%= p.text_area :details %>
+	</div>
+	<div class="field">
+	<%= p.label :client %><br />
+	<%= p.text_field :client %>
+	</div>
+	<div class="field">
+	<%= p.label :client_type %><br />
+	<%= p.text_field :client_type %>
+	</div>
+	<div class="field">
+	<%= p.label :role %><br />
+	<%= p.text_field :role %>
+	</div>
+	<div class="actions">
+	<%= p.submit "Create Project" %>
+	</div>
+<% end%>

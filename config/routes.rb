@@ -6,12 +6,11 @@ TKComRails::Application.routes.draw do
   end
 
   resources :posts
+  resources :projects
   
   root :to => "home#index"
   
-  get "projects/new"
-
-  match '/new_post', :to => 'posts#new'
+  # get "projects/new"
 
   get "pages/about"
 
