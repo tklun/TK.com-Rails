@@ -2,6 +2,6 @@
 %p= @post.content
 
 %ul
-  - @post.tags.each do |tag|
-    %li
-      = link_to tag.tag_name, tag
+	- @post.tags.each do |tag|
+		%li
+			= link_to tag.tag_name, tag

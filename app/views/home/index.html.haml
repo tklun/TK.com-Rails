@@ -4,3 +4,8 @@
 		#li
 			= link_to post.headline, post
 	= will_paginate @top_posts
+	
+%ul
+	- @tags.each do |tag|
+		%li
+			= link_to tag.tag_name, tag
