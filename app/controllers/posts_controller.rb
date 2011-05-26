@@ -56,6 +56,8 @@ class PostsController < ApplicationController
     @tags = Tag.all # No order specified as there is only one field
   end
 
+  # Saving code below as a reference, but it has successfully been refactored out.
+  
   # def get_post_tags(post)
   #   @tag_array = []
   #   @post_tag_list = post.tags

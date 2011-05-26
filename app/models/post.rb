@@ -23,13 +23,6 @@ class Post < ActiveRecord::Base
   validates :content, :presence => true
   # validates :post_tag, :presence => true
   
-  def create_tag_name_array(post)
-    @tag_array = []
-    post.tags.each do |tag|
-      @tag_array << tag.tag_name
-    end
-  end
-  
   private
   def update_tags
     tags.delete_all
