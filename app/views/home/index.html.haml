@@ -1,0 +1,6 @@
+%h1 Home
+%ul
+	- @top_posts.each do |post|
+		#li
+			= link_to post.headline, post
+	= will_paginate @top_posts

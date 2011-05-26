@@ -1,4 +1,5 @@
 TKComRails::Application.routes.draw do
+  root :to => "home#index"
   devise_for :users,  :controllers => { :registrations => "users/registrations" }
 
   devise_scope :user do
@@ -8,8 +9,7 @@ TKComRails::Application.routes.draw do
   resources :posts
   resources :projects
   resources :tags
-    
-  root :to => "home#index"
+  resources :home
   
   # get "projects/new"
 

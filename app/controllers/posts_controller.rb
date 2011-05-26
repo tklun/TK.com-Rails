@@ -4,15 +4,13 @@ class PostsController < ApplicationController
   def index #Show all posts
     @title = "Posts"
     @posts = Post.all
+    # @posts = Post.find(:all, :limit => 5)
+    # Person.find(:all, :offset => 10, :limit => 10)
   end
 
   def show #Show individual posts
     @post = Post.find(params[:id])
     @title = @post.headline
-    # @tag_text = get_tag(@post)
-    # @tag_list = get_post_tags
-    # get_post_tags(@post)
-    # create_tag_name_array(@post)
   end
   
   def new
@@ -36,21 +34,12 @@ class PostsController < ApplicationController
         format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
       end
     end
-    # if @post.save
-    #   redirect_to @post
-    # else
-    #   @title = "New Post"
-    #   render 'new'
-    # end
   end
 
   def edit
     @post = Post.find(params[:id])
     @title = "Edit Post"
-    
     get_all_tags
-    
-
   end
   
   def update

@@ -1,0 +1,4 @@
+%div{:class => "#{'single-' if defined? single}post", :id => "post-#{post.id}"}
+  %h1= link_to post.headline, :action => "show", :id => post
+  .post-body
+    = post.content
