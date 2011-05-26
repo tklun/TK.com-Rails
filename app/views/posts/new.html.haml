@@ -16,6 +16,15 @@
   .field
     = p.label :tag
     %br
-    = select("post", "tag", Tag.all.collect {|t| [ t.tag_name, t.id ] })
+    / = select("post", "tag", Tag.all.collect {|t| [ t.tag_name, t.id ] })
+    %br
+    - @tags.each do |tag|
+      = check_box_tag(                     |
+		    "post[tag_list][#{tag.id}]",      |
+		    "1",                               |
+		    @post.tags.detect{|d| d == tag}) |
+      = "#{tag.tag_name}"
+    %br/
+
   .actions
     = p.submit "Create Post"

@@ -10,13 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110526033958) do
+ActiveRecord::Schema.define(:version => 20110526172119) do
 
   create_table "posts", :force => true do |t|
     t.string   "headline"
     t.text     "content"
     t.string   "image_path"
-    t.string   "tag"
+    t.string   "post_tag"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -44,7 +44,6 @@ ActiveRecord::Schema.define(:version => 20110526033958) do
 
   create_table "tags", :force => true do |t|
     t.string   "tag_name"
-    t.integer  "post_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
