@@ -14,7 +14,7 @@ gem "cancan"
 
 # Code Helpers
 gem 'haml'
-gem 'formtastic'
+# gem 'formtastic'
 
 group :development do
 	gem 'rspec-rails', '2.5.0'
