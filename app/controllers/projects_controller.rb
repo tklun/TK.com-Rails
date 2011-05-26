@@ -24,8 +24,25 @@ class ProjectsController < ApplicationController
       render 'new'
     end
   end
+  
   def edit
-    
+    @project = Project.find(params[:id])
+    @title = "Edit Project"
+  end
+  
+  def update
+    @project = Project.find(params[:id])
+
+    respond_to do |format|
+      if @project.update_attributes(params[:project])
+        flash[:notice] = 'Project was successfully updated.'
+        format.html { redirect_to(@project) }
+        format.xml  { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @project.errors, :status => :unprocessable_entity }
+      end
+    end
   end
   
   def destroy

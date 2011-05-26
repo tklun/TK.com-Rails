@@ -45,7 +45,29 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @post = Post.find(params[:id])
+    @title = "Edit Post"
     
+    get_all_tags
+    
+
+  end
+  
+  def update
+    params[:tags] ||= {}
+    @post = Post.find(params[:id])
+    get_all_tags
+
+    respond_to do |format|
+      if @post.update_attributes(params[:post])
+        flash[:notice] = 'Post was successfully updated.'
+        format.html { redirect_to(@post) }
+        format.xml  { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
+      end
+    end
   end
   
   def destroy

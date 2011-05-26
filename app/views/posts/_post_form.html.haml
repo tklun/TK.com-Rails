@@ -1,0 +1,27 @@
+= form_for(@post) do |p|
+  = render 'shared/error_messages', :object => p.object
+  .field
+    = p.label :headline
+    %br
+    = p.text_field :headline
+  .field
+    = p.label :content
+    %br
+    = p.text_area :content
+  .field
+    = p.label :image_path
+    %br
+    = p.text_field :image_path
+  .field
+    = p.label :tag
+    %br
+    - @tags.each do |tag|
+      = check_box_tag(                     |
+		    "post[tag_list][#{tag.id}]",      |
+		    "1",                               |
+		    @post.tags.detect{|d| d == tag}) |
+      = "#{tag.tag_name}"
+    %br
+
+  .actions
+    = p.submit "Create Post"
