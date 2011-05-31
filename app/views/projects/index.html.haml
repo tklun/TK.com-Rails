@@ -3,3 +3,5 @@
 	- @projects.each do |project|
 		#li
 			= link_to project.headline, project
+			- if user_signed_in?
+				= link_to "delete", project, :method => :delete, :confirm => "You sure?", :title => project.headline

@@ -46,8 +46,8 @@ class TagsController < ApplicationController
   end
   
   def destroy
-    # Tag.find(params[:id]).destroy
-    # flash[:success] = "Tag destroyed."
-    # redirect_to tags_path
+    Tag.find(params[:id]).destroy
+    flash[:success] = "Successfully deleted"
+    redirect_to '/tags'
   end
 end

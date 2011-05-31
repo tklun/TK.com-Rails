@@ -125,7 +125,6 @@ describe PostsController do
         response.should redirect_to('/posts')
       end
     end
-
   end
 
 end

@@ -3,3 +3,5 @@
 	- @tags.each do |tag|
 		%li
 			= link_to tag.tag_name, tag
+			- if user_signed_in?
+				= link_to "delete", tag, :method => :delete, :confirm => "You sure?", :title => tag.tag_name
