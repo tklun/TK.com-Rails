@@ -527,6 +527,10 @@ body #container #main aside #social-networks li.last-fm a
 	background:transparent url(../i/icons/lastfm.png) 100% 50% no-repeat;
 }
 
+body #container #main aside #social-networks li.github a
+{
+	background:transparent url(../i/icons/github.png) 100% 50% no-repeat;
+}
 
 body #container #main section#portfolio
 {	
