@@ -60,7 +60,9 @@ class PostsController < ApplicationController
   end
   
   def destroy
-  
+    Post.find(params[:id]).destroy
+    flash[:success] = "Successfully deleted"
+    redirect_to '/posts'
   end
   
   def get_all_tags

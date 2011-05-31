@@ -13,6 +13,9 @@ class Tag < ActiveRecord::Base
   has_and_belongs_to_many :posts
   attr_accessible :tag_name
   
+  validates :tag_name,  :uniqueness => { :case_sensitive => false }
+  validates :tag_name, :presence => true
+  
   def display_name
     "#{tag_name}"
   end

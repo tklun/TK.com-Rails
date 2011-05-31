@@ -21,7 +21,6 @@ class Post < ActiveRecord::Base
   
   validates :headline, :presence => true
   validates :content, :presence => true
-  # validates :post_tag, :presence => true
   
   private
   def update_tags

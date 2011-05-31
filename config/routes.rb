@@ -4,16 +4,13 @@ TKComRails::Application.routes.draw do
 
   devise_scope :user do
       get "logout", :to => "devise/sessions#destroy"
+      match 'sign_in' => 'devise/sessions#create', :as => :signin
   end
 
-  resources :posts
-  resources :projects
-  resources :tags
-  resources :home
+  resources :posts, :projects, :tags, :home
   
-  # get "projects/new"
-
-  get "pages/about"
+  match 'about', :to => 'pages#about'
+  # match 'work', :to  => 'projects#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

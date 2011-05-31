@@ -24,6 +24,7 @@ class TagsController < ApplicationController
       render 'new'
     end
   end
+  
   def edit
     @tag = Tag.find(params[:id])
     @title = "Edit Tag"
@@ -45,6 +46,8 @@ class TagsController < ApplicationController
   end
   
   def destroy
-  
+    # Tag.find(params[:id]).destroy
+    # flash[:success] = "Tag destroyed."
+    # redirect_to tags_path
   end
 end

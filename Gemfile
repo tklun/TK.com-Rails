@@ -14,7 +14,10 @@ gem "cancan"
 
 # Code Helpers
 gem 'haml'
-# gem 'formtastic'
+# gem 'html5-boilerplate'
+gem 'taps'
+gem 'jquery-rails', '>= 1.0.3'
+
 
 group :development do
 	gem 'rspec-rails', '2.5.0'

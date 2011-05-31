@@ -94,4 +94,38 @@ describe PostsController do
       end
     end
   end
+
+  describe "DELETE 'destroy'" do
+    before(:each) do
+      @user = Factory(:user)
+      @attr = { :headline => "New Post", :content => "Lipsum",
+                :image_path => "", :tag => "tag" }
+      @post = Post.create!(@attr)
+    end
+    
+    describe "as a non-signed-in user" do
+      it "should deny access" do
+        delete :destroy, :id => @post
+        response.should redirect_to('/users/sign_in')
+      end
+    end
+
+    describe "as a signed-in user" do
+      before(:each) do
+        sign_in @user
+      end
+      it "should destroy the post" do
+        lambda do
+          delete :destroy, :id => @post
+        end.should change(Post, :count).by(-1)
+      end
+
+      it "should redirect to the posts page" do
+        delete :destroy, :id => @post
+        response.should redirect_to('/posts')
+      end
+    end
+
+  end
+
 end
