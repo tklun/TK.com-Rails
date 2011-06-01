@@ -22,6 +22,8 @@ class Post < ActiveRecord::Base
   validates :headline, :presence => true
   validates :content, :presence => true
   
+  markdownize! :content
+  
   private
   def update_tags
     tags.delete_all
