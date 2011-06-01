@@ -1,0 +1,8 @@
+%h2
+	= link_to post.headline, post
+%ul
+	- post.tags.each do |tag|
+		%li
+			= link_to tag.tag_name, tag
+.post-content
+	= post.content

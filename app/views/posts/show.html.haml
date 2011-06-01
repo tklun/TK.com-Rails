@@ -1,7 +1,2 @@
-%h1= @post.headline
-%p= @post.content
-
-%ul
-	- @post.tags.each do |tag|
-		%li
-			= link_to tag.tag_name, tag
+#post-content
+	= render(:partial => "posts/individual_post", :locals => {:post => @post})

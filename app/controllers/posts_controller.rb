@@ -4,8 +4,6 @@ class PostsController < ApplicationController
   def index #Show all posts
     @title = "Posts"
     @posts = Post.all
-    # @posts = Post.find(:all, :limit => 5)
-    # Person.find(:all, :offset => 10, :limit => 10)
   end
 
   def show #Show individual posts
@@ -68,22 +66,5 @@ class PostsController < ApplicationController
   def get_all_tags
     @tags = Tag.all # No order specified as there is only one field
   end
-
-  # Saving code below as a reference, but it has successfully been refactored out.
   
-  # def get_post_tags(post)
-  #   @tag_array = []
-  #   @post_tag_list = post.tags
-  #   @post_tag_list.each do |tag|
-  #     @tag_array << tag.tag_name
-  #   end
-  # end
-  # 
-  # def create_tag_name_array(post)
-  #   @tag_array = []
-  #   post.tags.each do |tag|
-  #     @tag_array << tag.tag_name
-  #   end
-  # end
-
 end

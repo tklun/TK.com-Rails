@@ -1,11 +1,12 @@
 %h1 Home
+- top_posts(5)
 %ul
 	- @top_posts.each do |post|
-		#li
-			= link_to post.headline, post
-	= will_paginate @top_posts
+		%li{:class => "#{'single-' if defined? single}post", :id => "post-#{post.id}"}
+			= render(:partial => "posts/individual_post", :locals => {:post => post})
 	
-%ul
-	- @tags.each do |tag|
-		%li
-			= link_to tag.tag_name, tag
+-#%ul
+-#	- all_tags
+-#	- @tags.each do |tag|
+-#		%li
+-#			= link_to tag.tag_name, tag

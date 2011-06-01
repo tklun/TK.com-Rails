@@ -532,6 +532,16 @@ body #container #main aside #social-networks li.github a
 	background:transparent url(../i/icons/github.png) 100% 50% no-repeat;
 }
 
+body #container #main section#content
+{
+	float:left;
+	background-color:#fff;
+	width:739px;
+	height:554px;
+	overflow:hidden;
+}
+
+/* May be able to remove this*/
 body #container #main section#portfolio
 {	
 	float:left;
