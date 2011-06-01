@@ -15,6 +15,7 @@ gem 'taps'
 gem 'jquery-rails', '>= 1.0.3'
 gem 'httparty'
 gem 'markdownizer'
+gem 'jammit'
 
 group :development do
 	gem 'rspec-rails', '2.5.0'
