@@ -4,4 +4,5 @@
 		%li
 			= link_to post.headline, post
 			- if user_signed_in?
-				= link_to "delete", post, :method => :delete, :confirm => "You sure?", :title => post.headline	
+				= link_to "delete", post, :method => :delete, :confirm => "You sure?", :title => post.headline
+= will_paginate

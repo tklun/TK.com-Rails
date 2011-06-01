@@ -1,5 +1,4 @@
-%h2
-	= link_to post.headline, post
+%h2= link_to post.headline, post
 %ul
 	- post.tags.each do |tag|
 		%li

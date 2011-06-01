@@ -29,9 +29,9 @@
 					%nav
 						%ul.clearfix
 							%li
-								%a.nav-work.visible{:href => "/projects"} Work
+								%a.nav-work.visible{:href => "/projects/"} Work
 							%li
-								%a.nav-about{:href => "/about"} About
+								%a.nav-about{:href => "/about/"} About
 							%li
 								%a.nav-contact{:href => "#contact"} Contact
 				%section#about
@@ -57,5 +57,4 @@
 				#x460
 				#x1020
 				#x1200y275
-
-	= debug(params) if Rails.env.development?
+			= debug(params) if Rails.env.development?
