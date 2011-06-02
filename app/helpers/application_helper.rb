@@ -8,4 +8,13 @@ module ApplicationHelper
       "#{base_title} | #{@title}"
     end
   end
+  
+  def body_class
+    base_class = ""
+    if @class.nil?
+      base_class
+    else
+      "#{@class}"
+    end
+  end
 end

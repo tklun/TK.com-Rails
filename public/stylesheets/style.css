@@ -540,6 +540,60 @@ body #container #main section#content
 	height:554px;
 	overflow:hidden;
 }
+/* Home Page Styles (Home#index) */
+body #container #main section#home-content
+{
+	width:514px;
+	padding:20px;
+	height:100%;
+	border-right:1px solid #ccc9c6;
+}
+
+body #container #main section#home-content h1
+{
+	font-size:36px;
+}
+
+
+body #container #main section#home-content ul#top-posts,
+body #container #main section#home-content ul#top-posts li
+{
+	list-style-type:none;
+	padding:0;
+	margin:0;
+}
+
+body #container #main section#home-content ul#top-posts li
+{
+	
+}
+
+body #container #main section#home-content ul#top-posts li h2
+{
+	font-size:20px;
+}
+
+body #container #main section#home-content ul#top-posts ul#post-tags
+{
+	margin:0;
+	size:12px;
+}
+
+body #container #main section#home-content ul#top-posts ul#post-tags li
+{
+	padding-right:10px;
+	display:inline;
+}
+
+body #container #main section#home-content ul#top-posts li .post-content
+{
+	padding-top:15px;
+}
+
+body #container #main section#home-sidebar
+{
+	
+}
 
 /* May be able to remove this*/
 body #container #main section#portfolio
@@ -681,7 +735,17 @@ body #container #main section#portfolio section.portfolio-info .portfolio-item-t
 	font:normal 12px Arial,Verdana,sans-serif;
 	color:#277cb0;
 }
-
+/* Flash Styles */
+.flash
+{
+	position: absolute;
+	width:100%;
+	text-align:center;
+	height:25px;
+	background-color: rgba(0,0,0, .5);
+	color: rgb(255,255,255);
+}
+/* Grid Highlights */
 .rgba #highlights div
 {
 	position:absolute;

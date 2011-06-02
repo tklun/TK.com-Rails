@@ -15,12 +15,12 @@ gem 'taps'
 gem 'jquery-rails', '>= 1.0.3'
 gem 'httparty'
 gem 'markdownizer'
-gem 'jammit'
+# gem 'jammit'
 
 group :development do
 	gem 'rspec-rails', '2.5.0'
 	gem 'annotate-models', '1.0.4'
-  	gem 'faker', '0.3.1'
+  gem 'faker', '0.3.1'
 end
 
 group :test do

@@ -5,4 +5,7 @@ module PostsHelper
     @top_posts = Post.find(:all, :limit => num_of_posts)
   end
   
+  def tags_and_time
+  end
+  
 end

@@ -1,9 +1,14 @@
-%h1 Home
-- top_posts(5)
-%ul
-	- @top_posts.each do |post|
-		%li{:class => "#{'single-' if defined? single}post", :id => "post-#{post.id}"}
-			= render(:partial => "posts/individual_post", :locals => {:post => post})
+%section#home-content
+	%h1 Words
+	- top_posts(5)
+	%ul#top-posts
+		- @top_posts.each do |post|
+			%li{:class => "#{'single-' if defined? single}post", :id => "post-#{post.id}"}
+				= render(:partial => "posts/individual_post", :locals => {:post => post})
+%section#home-sidebar
+
+
+
 	
 -#%ul
 -#	- all_tags
