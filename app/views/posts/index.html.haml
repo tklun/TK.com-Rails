@@ -1,28 +1,6 @@
 %section#posts-content
 	%section#posts-sidebar.side-col
-		.col-item
-			%h3 Blog
-			%ul
-				- @posts.each do |post|
-					%li
-						= link_to post.headline, post
-						- if user_signed_in?
-							= link_to "delete", post, :method => :delete, :confirm => "You sure?", :title => post.headline
-		.col-item
-			%h3 By Topic
-			%ul
-				- all_tags
-				- @tags.each do |tag|
-					%li
-						= link_to tag.tag_name, tag
-		.col-item
-			%h3 By Date
-			%ul
-				- all_tags
-				- @tags.each do |tag|
-					%li
-						= link_to tag.tag_name, tag
-
+		= render(:partial => "posts_sidebar")
 	%section#posts-list.main-col
 		%h1 Recent Blog Posts
 		%ul

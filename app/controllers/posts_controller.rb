@@ -8,6 +8,7 @@ class PostsController < ApplicationController
 
   def show #Show individual posts
     @post = Post.find(params[:id])
+    @posts = Post.paginate( :all, :per_page => 10, :page => params[:page] )
     @title = @post.headline
   end
   

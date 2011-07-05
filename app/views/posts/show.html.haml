@@ -1,2 +1,5 @@
-#post-content
-	= render(:partial => "posts/individual_post", :locals => {:post => @post})
+%section#posts-content
+	%section#posts-sidebar.side-col
+		= render(:partial => "posts_sidebar")
+	%section#posts-list.main-col
+		= render(:partial => "posts/individual_post", :locals => {:post => @post})
