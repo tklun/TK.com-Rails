@@ -35,7 +35,7 @@ body, select, input, textarea { color:#444; }
 h1,h2,h3,h4,h5,h6 { font-weight: bold; text-rendering: optimizeLegibility; }
 html { -webkit-font-smoothing: antialiased; }
 a:hover, a:active { outline: none; }
-a, a:active, a:visited { color:#607890; }
+a, a:active, a:visited { color:rgb(39,124,176); text-decoration:none; }
 a:hover { color:#036; }
 ul { margin-left:30px; }
 ol { margin-left:30px; list-style-type: decimal; }
@@ -133,7 +133,6 @@ body, select, input, textarea { color:#444; }
 h1,h2,h3,h4,h5,h6 { font-weight: bold; text-rendering: optimizeLegibility; }
 html { -webkit-font-smoothing: antialiased; }
 a:hover, a:active { outline: none; }
-a, a:active, a:visited { color:#607890; }
 a:hover { color:#036; }
 ul { margin-left:30px; }
 ol { margin-left:30px; list-style-type: decimal; }
@@ -540,63 +539,146 @@ body #container #main section#content
 	height:554px;
 	overflow:hidden;
 }
-/* Home Page Styles (Home#index) */
-body #container #main section#home-content
+
+/* Internal Page Columns */
+body #container #main section#content .side-col,
+body #container #main section#content .main-col
 {
-	width:514px;
-	padding:20px;
+	float:left;
 	height:100%;
+}
+
+body #container #main section#content .side-col
+{
+	width:184px;
 	border-right:1px solid #ccc9c6;
 }
 
-body #container #main section#home-content h1
+body #container #main section#content .main-col
 {
-	font-size:36px;
+	width:514px;
+	padding:20px;
+}
+
+body #container #main section#content .side-col .col-item
+{
+	width:144px;
+	padding:20px;
+	text-align:right;
+}
+
+body #container #main section#content .side-col .col-item ul,
+body #container #main section#content .main-col ul
+{
+	list-style-type:none;
 }
 
 
-body #container #main section#home-content ul#top-posts,
-body #container #main section#home-content ul#top-posts li
+/* Home Page Styles (Home#index) */
+body #container #main section#home-content,
+body #container #main section#home-posts
+{
+	height:100%;
+	float:left;
+}
+
+body #container #main section#home-content
+{
+	border-right:1px solid #ccc9c6;
+	width:369px;
+}
+
+body #container #main section#home-about
+{
+	height:144px;
+	padding:20px;
+	background-color: rgb(234,233,231);
+}
+
+body #container #main section#home-about h1
+{
+	font-size:14px;
+}
+
+body #container #main section#home-work
+{
+	height:100%;
+	padding:20px;
+	background-color: rgb(213,211,207);
+}
+
+body #container #main section#home-work h1
+{
+	font-size:18px;
+}
+
+body #container #main section#home-posts
+{
+	width:329px;
+	padding:20px;
+	font-size:18px;
+}
+
+body #container #main section#home-posts h1
+{
+	font-size:20px;
+}
+
+
+body #container #main section#home-posts ul#top-posts,
+body #container #main section#home-posts ul#top-posts li
 {
 	list-style-type:none;
 	padding:0;
 	margin:0;
 }
 
-body #container #main section#home-content ul#top-posts li
+body #container #main section#home-posts ul#top-posts li
 {
 	
 }
 
-body #container #main section#home-content ul#top-posts li h2
-{
-	font-size:20px;
-}
-
-body #container #main section#home-content ul#top-posts ul#post-tags
+body #container #main section#home-posts ul#top-posts ul#post-tags
 {
 	margin:0;
-	size:12px;
+	font-size:12px;
 }
 
-body #container #main section#home-content ul#top-posts ul#post-tags li
+body #container #main section#home-posts ul#top-posts ul#post-tags li
 {
 	padding-right:10px;
 	display:inline;
 }
 
-body #container #main section#home-content ul#top-posts li .post-content
+body #container #main section#home-posts ul#top-posts li .post-content
 {
 	padding-top:15px;
+	color: rgb(127,127,127);
 }
 
-body #container #main section#home-sidebar
+/* Blog Page Styles (Home#posts) */
+body #container #main section#posts-content
 {
-	
+	height:100%;
+}
+
+body #container #main section#posts-list
+{
+
+}
+
+body #container #main section#posts-list h1
+{
+	font-size:20px;
+}
+
+body #container #main section#posts-list h2
+{
+	font-size:18px;
 }
 
 /* May be able to remove this*/
-body #container #main section#portfolio
+/*body #container #main section#portfolio
 {	
 	float:left;
 	background-color:#fff;
@@ -734,7 +816,7 @@ body #container #main section#portfolio section.portfolio-info .portfolio-item-t
 {
 	font:normal 12px Arial,Verdana,sans-serif;
 	color:#277cb0;
-}
+}*/
 /* Flash Styles */
 .flash
 {
