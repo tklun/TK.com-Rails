@@ -5,9 +5,8 @@
 	%section#home-work
 		%h1 Work
 %section#home-posts
-	%h1 Recent Posts Title
+	%h1 Recent Blog Posts
 	- top_posts(5)
 	%ul#top-posts
 		- @top_posts.each do |post|
-			%li{:class => "#{'single-' if defined? single}post", :id => "post-#{post.id}"}
-				= render(:partial => "posts/individual_post", :locals => {:post => post})
+			= render(:partial => "posts/posts_list", :locals => {:post => post}) # commented out ; what is this for

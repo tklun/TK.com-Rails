@@ -5,8 +5,7 @@
 		%h1 Recent Blog Posts
 		%ul
 			- @posts.each do |post|
-				%li
-					%h2= link_to post.headline, post
-					- if user_signed_in?
-						= link_to "delete", post, :method => :delete, :confirm => "You sure?", :title => post.headline
+				= render(:partial => "posts/posts_list", :locals => {:post => post}) # commented out ; what is this for
+				- if user_signed_in?
+					= link_to "delete", post, :method => :delete, :confirm => "You sure?", :title => post.headline
 		= will_paginate

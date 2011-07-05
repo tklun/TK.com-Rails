@@ -1,4 +1,4 @@
-class PostsController < ApplicationController
+class PostsController < ApplicationController    
   before_filter :authenticate_user!, :except => [:show, :index]
 
   def index #Show all posts
