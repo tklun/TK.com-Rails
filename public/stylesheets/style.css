@@ -609,6 +609,7 @@ body #container #main section#posts-list h1
 body #container #main section#posts-list h2
 {
 	font-size:18px;
+	line-height:36px;
 }
 
 body #container #main section#posts-list ul
@@ -623,7 +624,7 @@ body #container #main section#posts-list ul #post-tags
 	line-height:19px;
 }
 
-body #container #main section#posts-list ul #post-tags li
+body #container #main section#posts-list #post-tags li
 {
 	display:inline;
 }
@@ -638,6 +639,15 @@ body #container #main section#posts-list ul li.post
 body #container #main section#posts-list ul li.post:first-child
 {
 	padding-top:30px;
+}
+
+/* Individual Post Style */
+body #container #main section#posts-list .post-content
+{
+	color: rgb(127,127,127);
+	font-size:16px;
+	line-height:24px;
+	padding-top:24px;
 }
 
 /* Flash Styles */
