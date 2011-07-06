@@ -9,4 +9,4 @@
 	- top_posts(5)
 	%ul#top-posts
 		- @top_posts.each do |post|
-			= render(:partial => "posts/posts_list", :locals => {:post => post}) # commented out ; what is this for
+			= render(:partial => "posts/posts_list", :locals => {:post => post})

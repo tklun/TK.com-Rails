@@ -449,19 +449,21 @@ body #container #main section#content .side-col,
 body #container #main section#content .main-col
 {
 	float:left;
-	height:100%;
 }
 
 body #container #main section#content .side-col
 {
 	width:184px;
 	border-right:1px solid #ccc9c6;
+	height:100%;
 }
 
 body #container #main section#content .main-col
 {
 	width:514px;
-	padding:20px;
+	height:535px;
+	padding:20px 20px 0;
+	overflow-y:auto;
 }
 
 body #container #main section#content .side-col .col-item
@@ -601,53 +603,60 @@ body #container #main section#posts-list
 {
 }
 
-body #container #main section#posts-list h1
+body #container #main section#posts-list h1,
+body #container #main section#post h1
 {
 	font-size:20px;
 }
 
-body #container #main section#posts-list h2
+body #container #main section#posts-list h2,
+body #container #main section#post h2
 {
 	font-size:18px;
 	line-height:36px;
 }
 
-body #container #main section#posts-list ul
+body #container #main section#posts-list ul,
+body #container #main section#post ul
 {
 	color: rgb(127,127,127);
 	margin:0;
 }
 
-body #container #main section#posts-list ul #post-tags
+body #container #main section#posts-list ul #post-tags,
+body #container #main section#post ul #post-tags
 {
 	font-size:12px;
 	line-height:19px;
 }
 
-body #container #main section#posts-list #post-tags li
+body #container #main section#posts-list #post-tags li,
+body #container #main section#post #post-tags li
 {
 	display:inline;
 }
 
-body #container #main section#posts-list ul li.post
+body #container #main section#posts-list ul li.post,
+body #container #main section#post ul li.post
 {
 	padding-top:40px;
 	font-size:18px;
 	line-height:29px;
 }
 
-body #container #main section#posts-list ul li.post:first-child
+body #container #main section#posts-list ul li.post:first-child,
+body #container #main section#post ul li.post:first-child
 {
 	padding-top:30px;
 }
 
 /* Individual Post Style */
-body #container #main section#posts-list .post-content
+body #container #main section#post .post-content
 {
 	color: rgb(127,127,127);
 	font-size:16px;
 	line-height:24px;
-	padding-top:24px;
+	padding:24px 0 20px 0;
 }
 
 /* Flash Styles */
