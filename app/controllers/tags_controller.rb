@@ -4,10 +4,12 @@ class TagsController < ApplicationController
   def index #Show all Tags
     @title = "Tags"
     @tags = Tag.all
+    @posts = Post.all
   end
 
   def show #Show individual Tag
     @tag = Tag.find(params[:id])
+    @posts = Post.all
   end
   
   def new

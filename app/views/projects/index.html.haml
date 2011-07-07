@@ -1,7 +1,18 @@
-%h1 All Portfolio Items
-%ul
-	- @projects.each do |project|
-		#li
-			= link_to project.headline, project
-			- if user_signed_in?
-				= link_to "delete", project, :method => :delete, :confirm => "You sure?", :title => project.headline
+%section#work-content
+	%ul
+		%li
+			%section.side-col
+				.client-details
+					%h4 Agency
+					Arc Worldwide
+					%h4 Client
+					Beneful
+			%section.main-col
+				.project-details
+					%h2 Wagworld
+					%p Upgraded WagWorld from its initial launch to include community functionality including article comments, polls, quizzes, and sharing functionality. Developed complex AJAX procedures to create a seamless user experience and dynamically transfer data.
+					%h3 Technologies used:
+					%p.technology Valid HTML5, CSS3, CSS3Pie, jQuery, AJAX, ASP.Net
+					-# = link_to project.headline, project
+					-# - if user_signed_in?
+					-# 	= link_to "delete", project, :method => :delete, :confirm => "You sure?", :title => project.headline

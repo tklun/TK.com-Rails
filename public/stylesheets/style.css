@@ -466,6 +466,17 @@ body #container #main section#content .main-col
 	overflow-y:auto;
 }
 
+body #container #main section#content .main-col h1
+{
+	font-size:20px;
+}
+
+body #container #main section#content .main-col h2
+{
+	font-size:18px;
+	line-height:36px;
+}
+
 body #container #main section#content .side-col .col-item
 {
 	width:144px;
@@ -489,6 +500,7 @@ body #container #main section#content .side-col .col-item ul,
 body #container #main section#content .main-col ul
 {
 	list-style-type:none;
+	margin:0;
 }
 
 
@@ -545,11 +557,6 @@ body #container #main section#home-posts
 	font-size:18px;
 }
 
-body #container #main section#home-posts h1
-{
-	font-size:20px;
-}
-
 body #container #main section#home-posts ul#top-posts,
 body #container #main section#home-posts ul#top-posts li
 {
@@ -599,21 +606,10 @@ body #container #main section#posts-content
 	height:100%;
 }
 
-body #container #main section#posts-list
-{
-}
-
-body #container #main section#posts-list h1,
-body #container #main section#post h1
-{
-	font-size:20px;
-}
-
 body #container #main section#posts-list h2,
 body #container #main section#post h2
 {
-	font-size:18px;
-	line-height:36px;
+
 }
 
 body #container #main section#posts-list ul,
@@ -657,6 +653,76 @@ body #container #main section#post .post-content
 	font-size:16px;
 	line-height:24px;
 	padding:24px 0 20px 0;
+}
+
+body #container #main section#post .post-content p
+{
+	padding-bottom:15px;
+}
+
+/* Individual Post Style */
+body #container #main section#work-content
+{
+	
+}
+
+body #container #main section#work-content ul,
+body #container #main section#work-content ul li
+{
+	list-style-type:none;
+	margin:0;
+}
+
+body #container #main section#work-content .side-col
+{
+	border:0;
+}
+
+body #container #main section#work-content .main-col
+{
+	height:auto;
+	border-left:1px solid #ccc9c6;
+}
+
+body #container #main section#work-content .side-col .client-details
+{
+	padding:20px;
+	text-align:right;
+	font-size:14px;
+	line-height:19px;
+	font-weight:bold;
+	
+}
+
+body #container #main section#work-content .side-col .client-details h4
+{
+	font-weight:normal;
+	padding-top:25px;
+}
+
+body #container #main section#work-content .side-col .client-details h4:first-child
+{
+	padding-top:0;
+}
+
+body #container #main section#work-content .main-col .project-details
+{
+	
+}
+
+body #container #main section#work-content .main-col .project-details p
+{
+	font-size:16px;
+	line-height:24px;
+	color: rgb(127,127,127);
+}
+
+body #container #main section#work-content .main-col .project-details h3
+{
+	padding-top:20px;
+	font-size:16px;
+	line-height:38px;
+	font-weight:normal;
 }
 
 /* Flash Styles */

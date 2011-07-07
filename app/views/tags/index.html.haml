@@ -1,7 +1,11 @@
-%h1 All Tags
-%ul
-	- @tags.each do |tag|
-		%li
-			= link_to tag.tag_name, tag
-			- if user_signed_in?
-				= link_to "delete", tag, :method => :delete, :confirm => "You sure?", :title => tag.tag_name
+%section#tags-content
+	%section#tags-sidebar.side-col
+		= render(:partial => "posts/posts_sidebar")
+	%section#tags-list.main-col
+		%h1 All Tags
+		%ul
+			- @tags.each do |tag|
+				%li
+					= link_to tag.tag_name, tag
+					- if user_signed_in?
+						= link_to "delete", tag, :method => :delete, :confirm => "You sure?", :title => tag.tag_name

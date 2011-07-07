@@ -1,6 +1,9 @@
-%h1= @tag.tag_name
-
-%ul
-  - @tag.posts.each do |post|
-    %li
-      = link_to post.headline, post
+%section#tags-content
+	%section#tags-sidebar.side-col
+		= render(:partial => "posts/posts_sidebar")
+	%section#tags-list.main-col
+		%h1= @tag.tag_name
+		%ul
+			- @tag.posts.each do |post|
+				%li
+					= render(:partial => "posts/posts_list", :locals => {:post => post})
