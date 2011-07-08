@@ -1,27 +1,27 @@
 %section#work-content
 	%ul
-	- @projects.each do |project|
-		%li
-			%section.side-col
-				.client-details
-					- if project.agency
-						%h4 Agency
-						= project.agency
-					- if project.client
-						%h4 Client
-						= project.client
-					- if project.organization
-						%h4 Organization
-						= project.organization
-			%section.main-col
-				.project-details
-					%h2= project.headline
-					%p= project.details
-					%h3 Technologies used:
-					%p.technology= project.technology
-					.project-link
-						= link_to(project.link_url) do
-							Visit
-							= project.headline
-					- if user_signed_in?
-						= link_to "delete", project, :method => :delete, :confirm => "You sure?", :title => project.headline
+		- @projects.each do |project|
+			%li
+				%section.side-col
+					.client-details
+						- if project.agency != ""
+							%h4 Agency
+							= project.agency
+						- if project.client != ""
+							%h4 Client
+							= project.client
+						- if project.organization != ""
+							%h4 Organization
+							= project.organization
+				%section.main-col
+					.project-details
+						%h2= project.headline
+						%p= project.details
+						%h3 Technologies used:
+						%p.technology= project.technology
+						.project-link
+							= link_to(project.link_url) do
+								Visit
+								= project.headline
+						- if user_signed_in?
+							= link_to "delete", project, :method => :delete, :confirm => "You sure?", :title => project.headline

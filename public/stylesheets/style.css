@@ -474,7 +474,8 @@ body #container #main section#content .main-col h1
 body #container #main section#content .main-col h2
 {
 	font-size:18px;
-	line-height:36px;
+/*	line-height:36px;*/
+	padding-bottom:10px;
 }
 
 body #container #main section#content .side-col .col-item
