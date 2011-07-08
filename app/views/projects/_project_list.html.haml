@@ -1,0 +1,5 @@
+%ul#project-list
+	- @projects.each do |project|
+		%li.project
+			%h2= project.headline
+			.details= truncate(project.details, :length => 150, :separator => ' ')

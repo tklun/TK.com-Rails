@@ -14,7 +14,7 @@
 #
 
 class Project < ActiveRecord::Base
-  attr_accessible :headline, :details, :client, :client_type, :role
+  attr_accessible :headline, :details, :agency, :client, :organization, :technology, :role, :link_url
   
   validates :headline, :presence => true
   validates :details, :presence => true

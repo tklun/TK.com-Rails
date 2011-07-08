@@ -8,4 +8,12 @@ module PostsHelper
   def tags_and_time
   end
   
+  def tags(post)
+    # post.tags.each do |tag|
+    #   
+    # end
+    post.tags.collect{|tag| link_to tag.tag_name, tag}.join(', ').html_safe
+    # @tags_list = Post.find(post).collect{|tags| link_to tag.tag_name, tag}.join(', ')
+  end
+  
 end

@@ -4,6 +4,7 @@
 		%p Tom Klun is a Chicago-based web developer. Currently working as a Web Engineer at Arc Worldwide, he specializes in developing web sites for a variety of clients. Tom is an experienced developer with expertise in the latest development technologies including HTML5, CSS3, JavaScript and jQuery, and web site optimization.
 	%section#home-work
 		%h1 Work
+		= render(:partial => "projects/project_list")
 %section#home-posts
 	%h1 Recent Blog Posts
 	- top_posts(5)

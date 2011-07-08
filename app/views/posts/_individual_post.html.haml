@@ -1,8 +1,6 @@
 %h2= link_to post.headline, post
-%ul#post-tags
+#post-tags
 	%span Posted #{time_ago_in_words(post.created_at)} ago in
-	- post.tags.each do |tag|
-		%li
-			= link_to tag.tag_name, tag
+	%span.tags= tags(post)
 .post-content
 	!= post.rendered_content

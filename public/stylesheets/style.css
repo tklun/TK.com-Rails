@@ -512,6 +512,12 @@ body #container #main section#home-posts
 	float:left;
 }
 
+body #container #main section#home-content h1,
+body #container #main section#home-posts h1
+{
+	color: rgb(0,0,0);
+}
+
 body #container #main section#home-content
 {
 	border-right:1px solid #ccc9c6;
@@ -550,6 +556,29 @@ body #container #main section#home-work h1
 	font-size:18px;
 }
 
+body #container #main section#home-work ul
+{
+	list-style-type:none;
+	margin:0;
+	padding-top:20px;
+}
+
+body #container #main section#home-work ul .project
+{
+	font-size:16px;
+	color: rgb(127,127,127);
+}
+
+body #container #main section#home-work ul .project h2
+{
+	line-height:40px;
+}
+
+body #container #main section#home-work ul .project .details
+{
+	line-height:26px;
+}
+
 body #container #main section#home-posts
 {
 	width:329px;
@@ -580,17 +609,11 @@ body #container #main section#home-posts ul#top-posts li h2
 	padding-bottom:10px;
 }
 
-body #container #main section#home-posts ul#top-posts ul#post-tags
+body #container #main section#home-posts ul#top-posts #post-tags
 {
 	margin:0;
 	font-size:12px;
 	color: rgb(127,127,127);
-}
-
-body #container #main section#home-posts ul#top-posts ul#post-tags li
-{
-	padding-right:10px;
-	display:inline;
 }
 
 body #container #main section#home-posts ul#top-posts li .post-content
@@ -647,6 +670,11 @@ body #container #main section#post ul li.post:first-child
 }
 
 /* Individual Post Style */
+body #container #main section#post #post-tags
+{
+	color: rgb(127,127,127);	
+}
+
 body #container #main section#post .post-content
 {
 	color: rgb(127,127,127);
@@ -723,6 +751,12 @@ body #container #main section#work-content .main-col .project-details h3
 	font-size:16px;
 	line-height:38px;
 	font-weight:normal;
+}
+
+body #container #main section#work-content .main-col .project-details .project-link
+{
+	font-size:16px;
+	line-height:38px;
 }
 
 /* Flash Styles */

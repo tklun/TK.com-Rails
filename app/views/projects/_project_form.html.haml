@@ -9,13 +9,25 @@
 		%br
 		= p.text_area :details
 	.field
+		= p.label :technology
+		%br
+		= p.text_field :technology
+	.field
+		= p.label :agency
+		%br
+		= p.text_field :agency
+	.field
 		= p.label :client
 		%br
 		= p.text_field :client
 	.field
-		= p.label :client_type
+		= p.label :organization
 		%br
-		= p.text_field :client_type
+		= p.text_field :organization
+	.field
+		= p.label :link_url
+		%br
+		= p.text_field :link_url
 	.field
 		= p.label :role
 		%br
