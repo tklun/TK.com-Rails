@@ -9,8 +9,9 @@ TKComRails::Application.routes.draw do
 
   resources :posts, :projects, :tags, :home
   
-  match 'about', :to => 'pages#about'
-  # match 'work', :to  => 'projects#index'
+  
+  match "/:year(/:month(/:day))" => "posts#archive", :constraints => { :year => /\d{4}/, :month => /\d{2}/, :day => /\d{2}/ }    
+    # match 'work', :to  => 'projects#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

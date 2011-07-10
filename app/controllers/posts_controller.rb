@@ -12,6 +12,12 @@ class PostsController < ApplicationController
     @title = @post.headline
   end
   
+  def archive #Show archive
+    @year = params[:year]
+    @month = params[:month]
+    @day = params[:day]
+  end
+  
   def new
     @post = Post.new
     @title = "New Post"

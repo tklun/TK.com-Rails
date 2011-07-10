@@ -760,6 +760,33 @@ body #container #main section#work-content .main-col .project-details .project-l
 	line-height:38px;
 }
 
+/* Crazy Scroll Styles */
+/*body.scrolled * {
+	position:fixed;
+}
+*/
+body.scrolled #container,
+body.scrolled #container header,
+body.scrolled #main aside
+{
+	position:fixed;
+}
+
+body.scrolled #container header{
+	top:-22px;
+}
+
+body.scrolled #main aside {
+	top:163px;
+}
+
+body.scrolled #container #main section#posts-content {
+	top:163px;
+	left:272px;
+	background-color:#fff;
+	height:auto;
+}
+
 /* Flash Styles */
 .flash
 {

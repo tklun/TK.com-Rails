@@ -31,16 +31,7 @@ function initHover() {
 		}
 	);
 }
-/*
-function initParallax() {
-	$(".jFlowNext").click(function() {
-		$("body").animate({ backgroundPosition: "-10px 0px" }, 500);
-	});
-	$(".jFlowPrev").click(function() {
-		$("body").animate({ backgroundPosition: "10px 0px" }, 500);
-	});
-}
-*/
+
 function runHideEffect(target) {
 	$(target).hide("slide", { direction: "up" }, 250);
 }
@@ -48,7 +39,6 @@ function runHideEffect(target) {
 function runShowEffect(target){
 	$(target).show("slide", { direction: "up" }, 250);
 }
-
 
 function initCloseButton(selector,target) {
 	$(selector).click(function(event) {
@@ -288,4 +278,14 @@ var parseTracks = function(tracks) {
 			var track = currentTrack.name;
 			console.log(artist, " - ", track);
 		});
+}
+
+var postScroll = function() {
+	var maxScrollPos = 113;
+	var currentPos = $(window).scrollTop();
+	$(window).scroll(function() {
+		if (currentPos == maxScrollPos) {
+			console.log("fired")
+		};
+	});	
 }
