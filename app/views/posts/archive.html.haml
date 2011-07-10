@@ -1,3 +1,5 @@
-%h1= params[:year]
-%h1= params[:month]
-%h1= params[:day]
+.archives
+	%h2 Blog Archive
+	%ul
+		- for post in @posts
+			%li= h link_to post.headline, post_path(post)

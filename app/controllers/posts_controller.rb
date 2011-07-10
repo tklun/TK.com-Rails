@@ -13,9 +13,28 @@ class PostsController < ApplicationController
   end
   
   def archive #Show archive
-    @year = params[:year]
-    @month = params[:month]
-    @day = params[:day]
+    # @year = params[:year]
+    # @month = params[:month]
+    # @day = params[:day]
+    # @posts = Post.find_by_date(params[:year], params[:month])
+    
+    # @posts = Post.find(:all).
+      # where(:created_at => params[:date].to_date.beginning_of_month..params[:date].to_date.end_of_month).
+      # order("created_at desc")
+      # where(:year => params[:year], :month => params[:month]).order("created_at DESC")
+      # @posts = Post.all(:select => "headline, id, created_at", :order => "created_at DESC")
+
+      #set defaults if we didn't get month/year
+
+
+      #set start date to first day of a month
+      start_date = Date.parse("01-#{params[:month]}-#{params[:year]}")
+
+      end_date = start_date + 1.month 
+      
+      @posts = Post.find(:all, :conditions => ["created_at >= ? and created_at < ?", start_date, end_date])
+      # @post_months = @posts.group_by { |t| t.created_at.beginning_of_month }   
+
   end
   
   def new
