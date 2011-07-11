@@ -1,5 +1,6 @@
 .archives
 	%h2 Blog Archive
+	%h2= @month
 	%ul
 		- for post in @posts
 			%li= h link_to post.headline, post_path(post)

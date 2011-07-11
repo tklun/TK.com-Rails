@@ -25,8 +25,8 @@ class PostsController < ApplicationController
       # @posts = Post.all(:select => "headline, id, created_at", :order => "created_at DESC")
 
       #set defaults if we didn't get month/year
-
-
+      @month_number = params[:month].to_i
+      @month = Date::MONTHNAMES[@month_number]
       #set start date to first day of a month
       start_date = Date.parse("01-#{params[:month]}-#{params[:year]}")
 
