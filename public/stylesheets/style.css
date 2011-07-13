@@ -787,6 +787,14 @@ body.scrolled #container #main section#posts-content {
 	height:auto;
 }
 
+body.scrolled #container #main section#content {
+	height:auto;
+	overflow:auto;
+	left:185px;
+	top:72px;
+	position:relative;
+}
+
 /* Flash Styles */
 .flash
 {

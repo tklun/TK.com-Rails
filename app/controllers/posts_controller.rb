@@ -1,14 +1,14 @@
 class PostsController < ApplicationController    
-  before_filter :authenticate_user!, :except => [:show, :index]
+  before_filter :authenticate_user!, :except => [:show, :index, :archive]
 
   def index #Show all posts
     @title = "Posts"
-    @posts = Post.paginate( :all, :per_page => 10, :page => params[:page] )
+    @posts = Post.paginate( :all, :per_page => 10, :page => params[:page],:order => "created_at DESC" )
   end
 
   def show #Show individual posts
     @post = Post.find(params[:id])
-    @posts = Post.paginate( :all, :per_page => 10, :page => params[:page] )
+    @posts = Post.paginate( :all, :per_page => 10, :page => params[:page],:order => "created_at DESC"  )
     @title = @post.headline
   end
   
@@ -17,7 +17,7 @@ class PostsController < ApplicationController
     # @month = params[:month]
     # @day = params[:day]
     # @posts = Post.find_by_date(params[:year], params[:month])
-      @posts = Post.find(:all)
+      @posts = Post.find(:all,:order => "created_at DESC" )
       # where(:created_at => params[:date].to_date.beginning_of_month..params[:date].to_date.end_of_month).
       # order("created_at desc")
       # where(:year => params[:year], :month => params[:month]).order("created_at DESC")
@@ -32,7 +32,7 @@ class PostsController < ApplicationController
 
       end_date = start_date + 1.month 
       
-      @month_posts = Post.find(:all, :conditions => ["created_at >= ? and created_at < ?", start_date, end_date])
+      @month_posts = Post.find(:all,:order => "created_at DESC", :conditions => ["created_at >= ? and created_at < ?", start_date, end_date])
       # @post_months = @posts.group_by { |t| t.created_at.beginning_of_month }   
 
   end
