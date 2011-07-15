@@ -80,33 +80,71 @@ html, body
 	height:100%;
 }
 
-body
+body {
+	min-height:100%;
+	width:100%;
+}
+
+html {
+        background: url(../i/background.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+
+/*body
 {
 	background:#000 url(../i/skyline-narrow-1400.jpg) top left no-repeat;
 	background-size:cover;
 	-moz-background-size:cover;
 	min-height:100%;
 }
+*/
 
 body #grid
 {
-	background:transparent url(../i/grid.png) -99px -95px repeat;	
-	min-height:100%;
+/*	background:transparent url(../i/grid.png) -99px -95px repeat;	
+*/	min-height:100%;background:transparent url(../i/grid.png) -99px -95px repeat;	
+position:fixed;
 	width:100%;
-	padding-top:91px;
+	padding-bottom:91px;/* scrolled class style*/
+	margin-top:-91px;	 /* scrolled class style*/
 }
 
 
 body #container
 {
 	width:924px;
-	height:760px;
-	margin: 0 0 0 87px;
+/*	height:760px;
+*/	margin: 0 0 0 87px;
+position:relative;/*scrolling*/
+
+/*padding-top:185px;
+*/}
+
+
+body #container #fixed-buffer-bottom {
+    height: 20px;
+    position: fixed;
+		bottom:0;
+    width: 100%;
+    background: url(../i/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body #container header
 {
-	position:relative;
+position:fixed;
+top:0;
+  background: url(../i/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 body #container header h1
@@ -351,11 +389,15 @@ body #container  section#contact a#cancel
 body #container #main
 {
 	clear:both;
+/*position:relative;
+*/top:185px;
 }
 
 body #container #main aside
 {
 	width:184px;
+	position:fixed; /* scrolled class style*/
+	top:185px; /* scrolled class style*/
 	float:left;
 	background-color:rgba(39,124,176,1);
 	border-right:1px solid #ccc9c6;
@@ -439,9 +481,11 @@ body #container #main section#content
 	float:left;
 	background-color:#fff;
 	width:739px;
-	height:554px;
-	overflow:hidden;
-	font-family: 'AllerRegular','Helvetica Neue', Arial, sans-serif;
+margin-left: 185px;	/* scrolled class style*/
+margin-top:278px;
+/*	height:554px;
+*//*	overflow:hidden;
+*/	font-family: 'AllerRegular','Helvetica Neue', Arial, sans-serif;
 }
 
 /* Internal Page Columns */
@@ -454,16 +498,17 @@ body #container #main section#content .main-col
 body #container #main section#content .side-col
 {
 	width:184px;
-	border-right:1px solid #ccc9c6;
-	height:100%;
+v	height:100%;
 }
 
 body #container #main section#content .main-col
 {
 	width:514px;
-	height:535px;
-	padding:20px 20px 0;
-	overflow-y:auto;
+	border-left:1px solid #ccc9c6;
+	
+/*	height:535px;
+*/	/*padding:20px 20px 0;*/
+padding:20px 20px 54px;/*	overflow-y:auto;*/
 }
 
 body #container #main section#content .main-col h1
@@ -628,6 +673,7 @@ body #container #main section#home-posts ul#top-posts li .post-content
 body #container #main section#posts-content
 {
 	height:100%;
+/*	margin-top:-92px;*/
 }
 
 body #container #main section#posts-list h2,
@@ -765,8 +811,7 @@ body #container #main section#work-content .main-col .project-details .project-l
 	position:fixed;
 }
 */
-body.scrolled #container,
-body.scrolled #container header,
+/*body.scrolled #container header,
 body.scrolled #main aside
 {
 	position:fixed;
@@ -794,7 +839,36 @@ body.scrolled #container #main section#content {
 	top:72px;
 	position:relative;
 }
+*/
+html.scrolled{
+	margin-top:91px;
+}
+html.scrolled body #container{
+	padding-top:0;
+}
+html.scrolled body #grid {
+	position:absolute;
+	padding-bottom:93px;
+}
 
+html.scrolled body #container header {
+	position:relative;
+}
+
+html.scrolled body #container #main aside {
+	position:relative;
+	top:0;
+}
+
+html.scrolled body #container #main section#content {
+	margin-left:0;
+	margin-top:0;
+}
+html.scrolled body #container #fixed-buffer-bottom {
+	display:none;
+}
+html.scrolled body #container #main section#content
+{height:554px;}
 /* Flash Styles */
 .flash
 {
@@ -806,6 +880,10 @@ body.scrolled #container #main section#content {
 	color: rgb(255,255,255);
 }
 /* Grid Highlights */
+#highlights
+{
+	display:none;
+}
 .rgba #highlights div
 {
 	position:absolute;

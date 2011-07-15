@@ -1,5 +1,5 @@
 !!!
-%html
+%html.scrolled
 	%head
 		%title= title
 		= stylesheet_link_tag :all
@@ -21,42 +21,40 @@
 		- flash.each do |key, value|
 			%div{:class => "flash #{key}"}= value
 		#grid
-			#container
-				%header.clearfix
-					%a{:href => "/"}
-						%h1.ir Tom Klun - Web Developer
+		#container
+			%header.clearfix
+				%a{:href => "/"}
+					%h1.ir Tom Klun - Web Developer
+				%h2
+					Tom Klun |
+					%span.subhead Web Developer
+				%nav
+					%ul.clearfix
+						%li
+							%a.nav-work{:href => "/projects/"} Work
+						%li
+							%a.nav-about{:href => "/posts/"} Blog
+						%li
+							%a.nav-contact{:href => "#contact"} Contact
+			#main.clearfix
+				%aside
 					%h2
-						Tom Klun |
+						Tom Klun
+						%br
 						%span.subhead Web Developer
-					%nav
-						%ul.clearfix
-							%li
-								%a.nav-work{:href => "/projects/"} Work
-							%li
-								%a.nav-about{:href => "/posts/"} Blog
-							%li
-								%a.nav-contact{:href => "#contact"} Contact
-				%section#about
-					%a.close{:href => "#close"} X
-					%p Tom Klun is a Chicago-based web developer. Currently working as a Web Engineer at Arc Worldwide, he specializes in developing web sites for a variety of clients. Tom is an experienced developer with expertise in the latest development technologies including HTML5, CSS3, JavaScript and jQuery, and web site optimization.
-				#main.clearfix
-					%aside
-						%h2
-							Tom Klun
-							%br
-							%span.subhead Web Developer
-						%section#social-networks
-							%ul
-								%li.linkedin
-									%a{:href => "http://www.linkedin.com/in/tomklun"} LinkedIn
-								%li.last-fm
-									%a{:href => "http://www.last.fm/user/musicnvrstops"} Last.fm
-								%li.github
-									%a{:href => "http://www.github.com/tklun"} Github
-					%section#content
-						= yield
-			#highlights
-				#x460
-				#x1020
-				#x1200y275
-			-# = debug(params) if Rails.env.development?
+					%section#social-networks
+						%ul
+							%li.linkedin
+								%a{:href => "http://www.linkedin.com/in/tomklun"} LinkedIn
+							%li.last-fm
+								%a{:href => "http://www.last.fm/user/musicnvrstops"} Last.fm
+							%li.github
+								%a{:href => "http://www.github.com/tklun"} Github
+				%section#content
+					= yield
+			#fixed-buffer-bottom
+		#highlights
+			#x460
+			#x1020
+			#x1200y275
+		-# = debug(params) if Rails.env.development?
