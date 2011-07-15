@@ -140,6 +140,7 @@ body #container header
 {
 position:fixed;
 top:0;
+width:924px;
   background: url(../i/background.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
