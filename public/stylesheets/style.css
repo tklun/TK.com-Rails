@@ -70,11 +70,6 @@ button {  width: auto; overflow: visible; }
     Author: Tom Klun
  */
 
-html
-{
-	overflow-x: hidden;
-}
-
 html, body
 {
 	height:100%;
@@ -86,11 +81,13 @@ body {
 }
 
 html {
-        background: url(../i/background.jpg) no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+	margin-top:91px;
+	overflow-x: hidden;
+  background: url(../i/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /*body
@@ -106,24 +103,29 @@ body #grid
 {
 /*	background:transparent url(../i/grid.png) -99px -95px repeat;	
 */	min-height:100%;background:transparent url(../i/grid.png) -99px -95px repeat;	
-position:fixed;
 	width:100%;
-	padding-bottom:91px;/* scrolled class style*/
+	position:absolute;
+	padding-bottom:111px;/* scrolled class style*/
 	margin-top:-91px;	 /* scrolled class style*/
 }
 
+html.scroll body #grid {
+	padding-bottom:91px;/* scrolled class style*/
+	margin-top:-91px;
+	position:fixed;
+}
 
 body #container
 {
 	width:924px;
-/*	height:760px;
-*/	margin: 0 0 0 87px;
-position:relative;/*scrolling*/
+	margin: 0 0 0 87px;
+	position:relative;
+}
 
-/*padding-top:185px;
-*/}
-
-
+html.scroll body #container 
+{
+	position:relative;
+}
 /*body #container #fixed-buffer-bottom {
     height: 20px;
     position: fixed;
@@ -138,14 +140,20 @@ position:relative;/*scrolling*/
 
 body #container header
 {
-position:fixed;
-top:0;
+/*position:fixed;
+top:0;*/
 width:924px;
   background: url(../i/background.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+html.scroll body #container header
+{
+	position:fixed;
+	top:0;
 }
 
 body #container header h1
@@ -390,18 +398,23 @@ body #container  section#contact a#cancel
 body #container #main
 {
 	clear:both;
-/*position:relative;
-*/top:185px;
+	top:185px;
 }
 
 body #container #main aside
 {
 	width:184px;
-	position:fixed; /* scrolled class style*/
-	top:185px; /* scrolled class style*/
+	position:relative; /* scrolled class style*/
+	top:0px; /* scrolled class style*/
 	float:left;
 	background-color:rgba(39,124,176,1);
 	border-right:1px solid #ccc9c6;
+}
+
+html.scroll body #container #main aside
+{
+	position:fixed; /* scrolled class style*/
+	top:185px; /* scrolled class style*/
 }
 
 body #container #main aside h2
@@ -482,11 +495,25 @@ body #container #main section#content
 	float:left;
 	background-color:#fff;
 	width:739px;
-margin-left: 185px;	/* scrolled class style*/
-margin-top:278px;
-/*	height:554px;
-*//*	overflow:hidden;
-*/	font-family: 'AllerRegular','Helvetica Neue', Arial, sans-serif;
+	margin-left: 185px;	/* scrolled class style*/
+	padding-top:0;
+	margin-left:0;
+	margin-top:0;
+	height:554px; /* home style 7/16*/
+	overflow:hidden; /* home style 7/16*/
+	font-family: 'AllerRegular','Helvetica Neue', Arial, sans-serif;
+}
+
+body.posts-long #container #main section#content
+{
+	height:100%;
+}
+
+html.scroll body #container #main section#content
+{
+	margin-left: 185px;	/* scrolled class style*/
+	height:100%;
+	padding-top:278px;
 }
 
 /* Internal Page Columns */
@@ -499,17 +526,20 @@ body #container #main section#content .main-col
 body #container #main section#content .side-col
 {
 	width:184px;
-v	height:100%;
+	height:100%;
 }
 
 body #container #main section#content .main-col
 {
 	width:514px;
 	border-left:1px solid #ccc9c6;
-/*	height:535px;
-*/	/*padding:20px 20px 0;*/
-padding:20px 20px 54px 20px;/*	overflow-y:auto;*/
-margin-left:184px;
+	padding:20px 20px 54px 20px;
+	margin-left:0;
+}
+
+html.scroll body #container #main section#content .main-col
+{
+	margin-left:184px;	
 }
 
 body #container #main section#content .main-col h1
@@ -520,11 +550,15 @@ body #container #main section#content .main-col h1
 body #container #main section#content .main-col h2
 {
 	font-size:18px;
-/*	line-height:36px;*/
 	padding-bottom:10px;
 }
 
 body #container #main section#content .side-col {
+/*	position:fixed;
+	top:185px;*/
+}
+
+html.scroll body #container #main section#content .side-col {
 	position:fixed;
 	top:185px;
 }
@@ -679,7 +713,6 @@ body #container #main section#home-posts ul#top-posts li .post-content
 body #container #main section#posts-content
 {
 	height:100%;
-/*	margin-top:-92px;*/
 }
 
 body #container #main section#posts-list h2,
@@ -722,7 +755,7 @@ body #container #main section#post ul li.post:first-child
 	padding-top:30px;
 }
 
-/* Individual Post Style */
+/**** INDIVIDUAL POST STYLES ****/
 body #container #main section#post #post-tags
 {
 	color: rgb(127,127,127);	
@@ -741,7 +774,7 @@ body #container #main section#post .post-content p
 	padding-bottom:15px;
 }
 
-/* Individual Post Style */
+/**** WORK STYLES ****/
 body #container #main section#work-content
 {
 	
@@ -813,72 +846,53 @@ body #container #main section#work-content .main-col .project-details .project-l
 }
 
 /* Crazy Scroll Styles */
-/*body.scrolled * {
-	position:fixed;
-}
-*/
-/*body.scrolled #container header,
-body.scrolled #main aside
-{
-	position:fixed;
-}
 
-body.scrolled #container header{
-	top:-22px;
-}
+	html.scroll{
+		margin-top:0px;
+	}
 
-body.scrolled #main aside {
-	top:163px;
-}
-
-body.scrolled #container #main section#posts-content {
-	top:163px;
-	left:272px;
-	background-color:#fff;
-	height:auto;
-}
-
-body.scrolled #container #main section#content {
-	height:auto;
-	overflow:auto;
-	left:185px;
-	top:72px;
-	position:relative;
-}
-*/
-html.scrolled{
-	margin-top:91px;
-}
 html.scrolled body #container{
-	padding-top:0;
+/*	padding-top:0;*/
 }
+
 html.scrolled body #grid {
 	position:absolute;
-	padding-bottom:93px;
-}
+/*	padding-bottom:93px;
+*/}
 
-html.scrolled body #container header {
+/*html.scrolled body #container header {
 	position:relative;
-}
+}*/
 
 html.scrolled body #container #main aside {
-	position:relative;
-	top:0;
+/*	position:relative;
+	top:0;*/
 }
+
+html.scrolled body #container #main section#content{
+/*	padding-top:0;
+*/}
+
 html.scrolled body #container #main section#content .side-col {
-position:static;
-}
-html.scrolled body #container #main section#content .main-col
-{padding:20px 20px 54px;margin-left:0;}
-html.scrolled body #container #main section#content {
+/*position:static;
+*/}
+
+/*html.scrolled body #container #main section#content .main-col
+{
+	padding:20px 20px 54px;margin-left:0;
+}*/
+
+/*html.scrolled body #container #main section#content {
 	margin-left:0;
 	margin-top:0;
-}
-html.scrolled body #container #fixed-buffer-bottom {
-	display:none;
-}
-html.scrolled body #container #main section#content
-{height:554px;}
+}*/
+
+/*html.scrolled body #container #main section#content
+{height:554px;}*/
+
+
+
+
 /* Flash Styles */
 .flash
 {
@@ -889,6 +903,7 @@ html.scrolled body #container #main section#content
 	background-color: rgba(0,0,0, .5);
 	color: rgb(255,255,255);
 }
+
 /* Grid Highlights */
 #highlights
 {

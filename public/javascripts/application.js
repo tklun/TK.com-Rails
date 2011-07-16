@@ -6,14 +6,15 @@ postScroll()
 
 var postScroll = function() {
 	var maxScrollPos = 91;
-	$(window).scroll(function() {
-		var currentPos = $(window).scrollTop();
-		console.log(currentPos)
-		if (currentPos >= maxScrollPos) {
-			console.log("fired")
-			$("html").removeClass("scrolled");
-		} else if (currentPos <= maxScrollPos) {
-			$("html").addClass("scrolled");
-		};
-	});	
+	if ($("body").hasClass("posts-long"))
+		$(window).scroll(function() {
+			var currentPos = $(window).scrollTop();
+			console.log(currentPos)
+			if (currentPos >= maxScrollPos) {
+				console.log("fired")
+				$("html").addClass("scroll");
+			} else if (currentPos <= maxScrollPos) {
+				$("html").removeClass("scroll");
+			};
+		});	
 }
