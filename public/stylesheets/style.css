@@ -124,7 +124,7 @@ position:relative;/*scrolling*/
 */}
 
 
-body #container #fixed-buffer-bottom {
+/*body #container #fixed-buffer-bottom {
     height: 20px;
     position: fixed;
 		bottom:0;
@@ -134,7 +134,7 @@ body #container #fixed-buffer-bottom {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
+}*/
 
 body #container header
 {
@@ -506,10 +506,10 @@ body #container #main section#content .main-col
 {
 	width:514px;
 	border-left:1px solid #ccc9c6;
-	
 /*	height:535px;
 */	/*padding:20px 20px 0;*/
-padding:20px 20px 54px;/*	overflow-y:auto;*/
+padding:20px 20px 54px 20px;/*	overflow-y:auto;*/
+margin-left:184px;
 }
 
 body #container #main section#content .main-col h1
@@ -522,6 +522,11 @@ body #container #main section#content .main-col h2
 	font-size:18px;
 /*	line-height:36px;*/
 	padding-bottom:10px;
+}
+
+body #container #main section#content .side-col {
+	position:fixed;
+	top:185px;
 }
 
 body #container #main section#content .side-col .col-item
@@ -860,7 +865,11 @@ html.scrolled body #container #main aside {
 	position:relative;
 	top:0;
 }
-
+html.scrolled body #container #main section#content .side-col {
+position:static;
+}
+html.scrolled body #container #main section#content .main-col
+{padding:20px 20px 54px;margin-left:0;}
 html.scrolled body #container #main section#content {
 	margin-left:0;
 	margin-top:0;
