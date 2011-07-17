@@ -11,7 +11,6 @@ var postScroll = function() {
 			var currentPos = $(window).scrollTop();
 			console.log(currentPos)
 			if (currentPos >= maxScrollPos) {
-				console.log("fired")
 				$("html").addClass("scroll");
 			} else if (currentPos <= maxScrollPos) {
 				$("html").removeClass("scroll");
