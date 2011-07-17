@@ -908,6 +908,7 @@ html.scrolled body #container #main section#content .side-col {
 .flash
 {
 	position: absolute;
+	top:0;
 	width:100%;
 	text-align:center;
 	height:25px;
