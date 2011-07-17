@@ -6,7 +6,7 @@ postScroll()
 
 var postScroll = function() {
 	var maxScrollPos = 91;
-	if ($("body").hasClass("posts-long"))
+	if ($("body").hasClass("posts-long") || $("body").hasClass("work"))
 		$(window).scroll(function() {
 			var currentPos = $(window).scrollTop();
 			console.log(currentPos)

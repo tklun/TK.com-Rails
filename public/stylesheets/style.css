@@ -542,6 +542,11 @@ html.scroll body #container #main section#content .main-col
 	margin-left:184px;	
 }
 
+html.scroll body.work #container #main section#content .main-col
+{
+	margin-left:0;
+}
+
 body #container #main section#content .main-col h1
 {
 	font-size:20px;
@@ -561,6 +566,12 @@ body #container #main section#content .side-col {
 html.scroll body #container #main section#content .side-col {
 	position:fixed;
 	top:185px;
+}
+
+html.scroll body.work #container #main section#content .side-col
+{
+	position:static;
+	top:0;
 }
 
 body #container #main section#content .side-col .col-item

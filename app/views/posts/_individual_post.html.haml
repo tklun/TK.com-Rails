@@ -3,4 +3,5 @@
 	%span Posted #{time_ago_in_words(post.created_at)} ago in
 	%span.tags= tags(post)
 .post-content
+	=image_tag("../i/post-images/cupcake.jpg")
 	!= post.rendered_content

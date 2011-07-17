@@ -4,6 +4,7 @@ class ProjectsController < ApplicationController
   def index #Show all projects
     @title = "Portfolio"
     @projects = Project.all
+    @class = "work"
   end
 
   def show #Show individual project
