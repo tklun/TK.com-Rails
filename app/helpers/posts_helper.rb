@@ -2,7 +2,7 @@ module PostsHelper
   include ActionView::Helpers::TextHelper
   def top_posts(num_of_posts)
     # Without pagination
-    @top_posts = Post.find(:all, :limit => num_of_posts)
+    @top_posts = Post.find(:all, :limit => num_of_posts,:order => "created_at DESC")
   end
   
   def tags_and_time
