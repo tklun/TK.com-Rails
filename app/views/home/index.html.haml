@@ -7,7 +7,7 @@
 		= render(:partial => "projects/project_list")
 %section#home-posts
 	%h1 Recent Blog Posts
-	- top_posts(5)
+	- top_posts(3)
 	%ul#top-posts
 		- @top_posts.each do |post|
 			= render(:partial => "posts/posts_list", :locals => {:post => post})

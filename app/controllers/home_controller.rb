@@ -3,6 +3,8 @@ class HomeController < ApplicationController
     @title = "Home"
     @class = "home"
     @projects = Project.all
+    
+    @tracks = Track.get_all_tracks
   end
 
 end

@@ -490,6 +490,56 @@ body #container #main aside #social-networks li.github a
 	background:transparent url(../i/icons/github.png) 100% 50% no-repeat;
 }
 
+body #container #main aside #social-networks #last-fm
+{
+	background-color: #277CB0;
+  height: 329px;
+  margin-left: 185px;
+	padding:20px;
+  overflow: hidden;
+  position: absolute;
+  width: 329px;
+  z-index: 400;
+	font:13px normal 'AllerRegular','Helvetica Neue', Arial, sans-serif;
+	color:#fff;
+}
+
+body #container #main aside #social-networks #last-fm h4
+{
+	font-size:14px;
+}
+
+body #container #main aside #social-networks #last-fm h5
+{
+	display:none;
+}
+
+body #container #main aside #social-networks #last-fm ol
+{
+	margin:0;
+}
+
+body #container #main aside #social-networks #last-fm li
+{
+	line-height:17px;
+	padding:10px 0;
+}
+
+body #container #main aside #social-networks #last-fm li img
+{
+	float:left;
+	clear:left;
+	height:34px;
+	width:34px;
+	padding-right:10px;
+}
+
+body #container #main aside #social-networks #last-fm li p
+{
+	margin:0;
+	padding:0;
+}
+
 body #container #main section#content
 {
 	float:left;
@@ -715,9 +765,9 @@ body #container #main section#home-posts ul#top-posts #post-tags
 
 body #container #main section#home-posts ul#top-posts li .post-content
 {
-	padding-top:15px;
+	padding-top:10px;
 	color: rgb(127,127,127);
-	line-height:28px;
+	line-height:23px;
 }
 
 /* Blog Page Styles (Home#posts) */
@@ -868,41 +918,7 @@ html.scrolled body #container{
 
 html.scrolled body #grid {
 	position:absolute;
-/*	padding-bottom:93px;
-*/}
-
-/*html.scrolled body #container header {
-	position:relative;
-}*/
-
-html.scrolled body #container #main aside {
-/*	position:relative;
-	top:0;*/
 }
-
-html.scrolled body #container #main section#content{
-/*	padding-top:0;
-*/}
-
-html.scrolled body #container #main section#content .side-col {
-/*position:static;
-*/}
-
-/*html.scrolled body #container #main section#content .main-col
-{
-	padding:20px 20px 54px;margin-left:0;
-}*/
-
-/*html.scrolled body #container #main section#content {
-	margin-left:0;
-	margin-top:0;
-}*/
-
-/*html.scrolled body #container #main section#content
-{height:554px;}*/
-
-
-
 
 /* Flash Styles */
 .flash

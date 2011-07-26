@@ -50,6 +50,14 @@
 								%a{:href => "http://www.last.fm/user/musicnvrstops"} Last.fm
 							%li.github
 								%a{:href => "http://www.github.com/tklun"} Github
+						#last-fm
+							%h4 last.fm recent tracks
+							.recent-tracks
+								%h5 Recent Tracks
+								%ol
+									- recent_tracks
+									- @tracks.each do |track|
+										= render(:partial => "shared/track", :locals => {:track => track})
 				%section#content
 					= yield
 			-# #fixed-buffer-bottom
@@ -57,4 +65,4 @@
 			#x460
 			#x1020
 			#x1200y275
-		-# = debug(params) if Rails.env.development?
+		= debug(params) if Rails.env.development?
