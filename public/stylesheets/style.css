@@ -492,6 +492,7 @@ body #container #main aside #social-networks li.github a
 
 body #container #main aside #social-networks #last-fm
 {
+	display:none;
 	background-color: #277CB0;
   height: 329px;
   margin-left: 185px;
