@@ -6,8 +6,4 @@ class ApplicationController < ActionController::Base
     redirect_to root_url
   end   
 
-  def index
-    response.headers['Content-Encoding'] = 'gzip'
-    render :text => "Rendered at #{Time.now}"
-  end
 end
