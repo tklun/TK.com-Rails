@@ -165,7 +165,9 @@ body #container header h1
 	border-right:1px solid #ccc9c6;
 	border-bottom:1px solid #ccc9c6;
 	background-color:rgba(39,124,176,1);
-	background-image: url(../i/tk-logo.png);
+/*	background-image: url(../i/tk-logo.png);
+*/
+	background-image: url(../i/embed/tk-logo.png);
 	background-position:110px 105px;
 }
 
@@ -477,17 +479,22 @@ body #container #main aside #social-networks li a,body #container #main aside #s
 
 body #container #main aside #social-networks li.linkedin a
 {
-	background:transparent url(../i/icons/linkedin.png) 100% 50% no-repeat;
+/*	background:transparent url(../i/icons/linkedin.png) 100% 50% no-repeat;*/
+	background:transparent url(../i/embed/linkedin.png) 100% 50% no-repeat;
+
 }
 
 body #container #main aside #social-networks li.last-fm a
 {
-	background:transparent url(../i/icons/lastfm.png) 100% 50% no-repeat;
+/*	background:transparent url(../i/icons/lastfm.png) 100% 50% no-repeat;
+*/	background:transparent url(../i/embed/lastfm.png) 100% 50% no-repeat;
+
 }
 
 body #container #main aside #social-networks li.github a
 {
-	background:transparent url(../i/icons/github.png) 100% 50% no-repeat;
+/*	background:transparent url(../i/icons/github.png) 100% 50% no-repeat;
+*/	background:transparent url(../i/embed/github.png) 100% 50% no-repeat;
 }
 
 body #container #main aside #social-networks #last-fm
