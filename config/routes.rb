@@ -7,7 +7,7 @@ TKComRails::Application.routes.draw do
       match 'sign_in' => 'devise/sessions#create', :as => :signin
   end
 
-  resources :posts, :projects, :tags, :home
+  resources :posts, :projects, :tags, :home, :contact_messages
   
   
   match "archive/:year(/:month(/:day))" => "posts#archive", :constraints => { :year => /\d{4}/, :month => /\d{2}/, :day => /\d{2}/ }    

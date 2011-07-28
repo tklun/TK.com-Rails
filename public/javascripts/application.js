@@ -3,6 +3,10 @@
 $(document).ready(function() {
 	postScroll()
 	lastFM.toggle("#last-fm");
+	contactForm.toggle("#contact");
+	$('#contact_message_submit').click(function() {
+    // $("#result").html("<img src='images/loading.gif' />");
+  });
 })
 
 var postScroll = function() {
@@ -28,3 +32,12 @@ var lastFM = {
 		});
 	}
 };
+
+var contactForm = {
+	toggle : function(contactForm) {
+		$("nav .nav-contact").bind('click', function(event) {
+			event.preventDefault();
+			$(contactForm).slideToggle();
+		});
+	}
+}

@@ -277,8 +277,8 @@ body #container section#about p
 body #container section#contact
 {
 	position:absolute;
-	top:276px;
-	left:641px;
+	top:185px;
+	left:554px;
 	background-color:rgba(39,124,176,1);
 	height:514px;
 	width:329px;
@@ -290,42 +290,42 @@ body #container section#contact
 	font:normal 12px arial,verdana,sans-serif;
 }
 
-body #container  section#contact p
+body #container section#contact p
 {
 	color:#fff;
 }
 
-body #container  section#contact p.success
+body #container section#contact p.success
 {
 	display:none;
 }
 
-body #container  section#contact ul
+body #container section#contact ul
 {
 	margin:0;
 	padding:0;
 }
 
-body #container  section#contact li
+body #container section#contact li
 {
 	list-style-type:none;
 	clear: left;
 }
 
-body #container  section#contact li.name div,
-body #container  section#contact li.email div
+body #container section#contact li.name div,
+body #container section#contact li.email div
 {
 	float: left;
 }
 
-body #container  section#contact li.message label,
-body #container  section#contact li.message p.error
+body #container section#contact li.message label,
+body #container section#contact li.message p.error
 {
 	display:inline;
 	float:none;
 }
 
-body #container  section#contact li p.error
+body #container section#contact li p.error
 {
 	display:none;
 	color:red;
@@ -334,7 +334,7 @@ body #container  section#contact li p.error
 	padding-left:15px;
 }
 
-body #container  section#contact li.message p.error
+body #container section#contact li.message p.error
 {
 	display:none;
 	color:red;
@@ -343,20 +343,20 @@ body #container  section#contact li.message p.error
 	padding-left:15px;
 }
 
-body #container  section#contact label
+body #container section#contact label
 {
 	color:#fff;
 	display:block;
 	font-weight:bold;
 }
 
-body #container  section#contact input
+body #container section#contact input
 {
 	margin-bottom:30px;
 	width:205px;
 }
 
-body #container  section#contact #message
+body #container section#contact #message
 {
 	margin-bottom:30px;
 	width:315px;
@@ -364,7 +364,7 @@ body #container  section#contact #message
 	padding:5px;
 }
 
-body #container  section#contact a
+body #container section#contact a
 {
 	color:#fff;
 	text-decoration:none;
@@ -378,13 +378,13 @@ body #container  section#contact a
 	border-radius: 5px;
 }
 
-body #container  section#contact a#submit
+body #container section#contact a#submit
 {
 	width:117px;
 	background:#13537a url(../i/button-bg-sprite.jpg) repeat-x scroll 0 -27px;
 }
 
-body #container  section#contact a#cancel
+body #container section#contact a#cancel
 {
 	position:relative;
 	background:url("../i/button-bg-sprite.jpg") repeat-x scroll 0 0 #707A79;
