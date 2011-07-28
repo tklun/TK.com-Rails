@@ -6,7 +6,7 @@ class HomeController < ApplicationController
     
     @tracks = Track.get_all_tracks
     
-    response.headers['Content-Encoding'] = 'gzip'
+    # response.headers['Content-Encoding'] = 'gzip'
   end
 
 end
