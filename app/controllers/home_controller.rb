@@ -7,7 +7,6 @@ class HomeController < ApplicationController
     @tracks = Track.get_all_tracks
     
     response.headers['Content-Encoding'] = 'gzip'
-    render :text => "Rendered at #{Time.now}"
   end
 
 end
