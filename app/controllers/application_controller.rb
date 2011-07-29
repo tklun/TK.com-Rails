@@ -10,6 +10,9 @@ class ApplicationController < ActionController::Base
    private
    def custom_headers
      response.headers['Vary'] = 'Accept-Encoding'
+     response.headers['Cache-Control'] = 'public, max-age=31556926'
    end
+
+   after_filter :set_charset
 
 end

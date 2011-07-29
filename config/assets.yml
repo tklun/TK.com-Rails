@@ -16,6 +16,10 @@ javascripts:
     # - public/javascripts/lib/bindable.js
     # - public/javascripts/lib/set.js
     # - public/javascripts/lib/*.js
+    - public/javascripts/jquery.min.js    
+    - public/javascripts/modernizr-1.5.min.js
+    - public/javascripts/script.js
+    - public/javascripts/application.js
     - public/javascripts/*.js
     # - app/views/jst/workspace/*.jst
 
