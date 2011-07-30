@@ -26,5 +26,3 @@ stylesheets:
     - public/stylesheets/*.css
   workspace:
     # - public/stylesheets/pages/workspace.css
-  empty:
-    # - public/stylesheets/pages/empty.css
