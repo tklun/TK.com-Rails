@@ -35,7 +35,7 @@ var lastFM = {
 
 var contactForm = {
 	toggle : function(contactForm) {
-		$("nav .nav-contact").bind('click', function(event) {
+		$("li a.nav-contact").bind('click', function(event) {
 			event.preventDefault();
 			$(contactForm).slideToggle();
 		});
