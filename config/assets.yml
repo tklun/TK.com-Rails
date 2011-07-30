@@ -16,17 +16,15 @@ javascripts:
     # - public/javascripts/lib/bindable.js
     # - public/javascripts/lib/set.js
     # - public/javascripts/lib/*.js
-    - public/javascripts/jquery.min.js    
     - public/javascripts/modernizr-1.5.min.js
-    - public/javascripts/script.js
     - public/javascripts/application.js
-    - public/javascripts/*.js
+    - public/javascripts/rails.js
     # - app/views/jst/workspace/*.jst
 
 stylesheets:
   common:
     - public/stylesheets/*.css
   workspace:
-    - public/stylesheets/pages/workspace.css
+    # - public/stylesheets/pages/workspace.css
   empty:
-    - public/stylesheets/pages/empty.css
+    # - public/stylesheets/pages/empty.css
