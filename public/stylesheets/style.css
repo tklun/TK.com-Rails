@@ -323,7 +323,6 @@ body #container section#contact li.email div
 body #container section#contact li.message label,
 body #container section#contact li.message p.error
 {
-	display:inline;
 	float:none;
 }
 
@@ -343,6 +342,11 @@ body #container section#contact li.message p.error
 	float:none;
 	margin-top:20px;
 	padding-left:15px;
+}
+
+body #container section#contact li.message
+{
+	padding-bottom:30px;
 }
 
 body #container section#contact label
@@ -366,7 +370,8 @@ body #container section#contact #message
 	padding:5px;
 }
 
-body #container section#contact a
+body #container section#contact a,
+body #container section#contact input[type=submit]
 {
 	color:#fff;
 	text-decoration:none;
@@ -380,16 +385,28 @@ body #container section#contact a
 	border-radius: 5px;
 }
 
-body #container section#contact a#submit
+body #container section#contact #contact_message_submit,
+body #container section#contact a#cancel
 {
+	background-image:url("../i/embed/button-bg-sprite.jpg");
+}
+
+body #container section#contact #contact_message_submit
+{
+	display:block;
+	border:0;
 	width:117px;
-	background:#13537a url("../i/embed/button-bg-sprite.jpg") repeat-x scroll 0 -27px;
+	background-color:#13537a;
+	background-position: 0 -27px;
+	background-repeat: repeat-x;
 }
 
 body #container section#contact a#cancel
 {
 	position:relative;
-	background:url("../i/embed/button-bg-sprite.jpg") repeat-x scroll 0 0 #707A79;
+	background-color:#707A79;
+	background-position: 0 0;
+	background-repeat:repeat-x;
 	border:0 none;
 	margin-left:15px;
 	padding:5px 0;
