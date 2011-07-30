@@ -1,13 +1,13 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 $(document).ready(function() {
-	postScroll()
+	postScroll();
 	lastFM.toggle("#last-fm");
 	contactForm.showForm("#contact");
 	$('#contact_message_submit').click(function() {
     // $("#result").html("<img src='images/loading.gif' />");
   });
-})
+});
 
 var postScroll = function() {
 	var maxScrollPos = 91;
@@ -40,4 +40,4 @@ var contactForm = {
 			$(contactForm).slideToggle();
 		});
 	}
-}
+};
