@@ -37,7 +37,7 @@ var contactForm = {
 	toggle : function(contactForm) {
 		$("li a.nav-contact").bind('click', function(event) {
 			event.preventDefault();
-			$(contactForm).slideToggle();
+			$(contactForm).fadeToggle();
 		});
 	}
 }
