@@ -7,7 +7,7 @@ TKComRails::Application.routes.draw do
       match 'sign_in' => 'devise/sessions#create', :as => :signin
   end
 
-  resources :posts, :projects, :tags, :home, :contact_messages, :slugs
+  resources :posts, :projects, :tags, :home, :contact_messages
   
   # match 'posts/:headline', :to => 'posts#show'
   
