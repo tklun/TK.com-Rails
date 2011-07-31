@@ -16,7 +16,7 @@ javascripts:
     # - public/javascripts/lib/bindable.js
     # - public/javascripts/lib/set.js
     # - public/javascripts/lib/*.js
-    - public/javascripts/modernizr-1.5.min.js
+    - public/javascripts/modernizr.min.js
     - public/javascripts/application.js
     - public/javascripts/rails.js
     # - app/views/jst/workspace/*.jst

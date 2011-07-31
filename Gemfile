@@ -16,7 +16,8 @@ gem 'jquery-rails', '>= 1.0.3'
 gem 'httparty'
 gem 'markdownizer'
 gem 'jammit'
-gem 'rake', '~> 0.8.7' 
+gem 'rake'
+gem "friendly_id", "~> 3.2.1"
 
 group :development do
 	gem 'rspec-rails', '2.5.0'

@@ -1,6 +1,8 @@
 class PostsController < ApplicationController    
   before_filter :authenticate_user!, :except => [:show, :index, :archive]
-
+  before_filter :fetch_post, :only => :show
+  before_filter :ensure_current_post_url, :only => :show
+  
   def index #Show all posts
     @title = "Posts"
     @class = "posts"
@@ -97,3 +99,11 @@ class PostsController < ApplicationController
   end
   
 end
+private
+    def fetch_post
+      @post = Post.find(params[:id])
+    end
+
+    def ensure_current_post_url
+      redirect_to @post, :status => :moved_permanently unless @post.friendly_id_status.best?
+    end

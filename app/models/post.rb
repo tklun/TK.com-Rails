@@ -14,6 +14,12 @@
 
 class Post < ActiveRecord::Base
   has_and_belongs_to_many :tags
+  # use the "title" column as the basis of the friendly_id, and use slugs
+  has_friendly_id :headline, :use_slug => true,
+    # remove accents and other diacritics from Latin characters
+    :approximate_ascii => true,
+    # don't use slugs larger than 50 bytes
+    :max_length => 50
   
   attr_accessible :headline, :content, :image_path, :post_tag, :tag_list
   attr_accessor :tag_list
