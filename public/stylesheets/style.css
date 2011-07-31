@@ -210,10 +210,13 @@ body #container header nav ul li a:visited
 	margin:0 20px 23px 0;
 }
 
-body #container header nav ul li a:hover, body #container header nav ul li a.visible
+body #container header nav ul li a:hover, body #container header nav ul li a.visible,
+body.work #container nav li a.nav-work,
+body.posts #container nav li a.nav-blog
 {
 	border-bottom:3px solid #FFFFFF;
-	margin-bottom:20px;
+	padding-bottom:3px;
+	margin-bottom:17px;
 }
 
 body #container header nav ul li a.nav-work:hover
@@ -960,7 +963,6 @@ html.scrolled body #grid {
 /* Grid Highlights */
 #highlights
 {
-	display:none;
 }
 .rgba #highlights div
 {
@@ -997,6 +999,21 @@ html.scrolled body #grid {
 .rgba #highlights div.transparent
 {
 	background-color:rgba(255,255,255,.4);
+}
+
+.rgba.scroll #highlights div
+{
+	position:fixed;
+}
+
+.rgba.scroll #highlights #x1020
+{
+	top:0;
+}
+
+.rgba.scroll #highlights #x1200y275
+{
+	top:185px;
 }
 
 div.grid
