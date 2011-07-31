@@ -5,7 +5,7 @@ require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
 require 'jammit'
-Jammit.package! :base_url => "http://falling-flower-212.heroku.com/"
+# Jammit.package! :base_url => "http://falling-flower-212.heroku.com/"
 
 module ::TKComRails
   class Application
