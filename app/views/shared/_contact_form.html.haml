@@ -2,8 +2,6 @@
 	%a.close{:href => '#close'} X
 	%p.instruction
 		If you're interested in more information or web site development, send me a note with the form below.
-	%p.success
-		Thanks for your message.
 	= form_for @contact_message, :as => :contact_message, :url => { :controller => "/contact_messages", :action => :create }, :remote => true do |f|                      
 		%legend.ir Contact Form
 		%ul
@@ -26,3 +24,4 @@
 			= f.submit "Send Message"
 			
 			%a#cancel.cancel-close{:href => '#cancel'} Cancel
+		#result.success

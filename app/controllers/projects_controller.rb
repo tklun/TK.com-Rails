@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
   before_filter :authenticate_user!, :except => [:show, :index]
-
+  before_filter :fetch_project, :only => :show
+  before_filter :ensure_current_project_url, :only => :show
   def index #Show all projects
     @title = "Portfolio"
     @projects = Project.all
@@ -52,3 +53,11 @@ class ProjectsController < ApplicationController
     redirect_to '/projects'
   end
 end
+private
+    def fetch_project
+      @project = Project.find(params[:id])
+    end
+
+    def ensure_current_project_url
+      redirect_to @project, :status => :moved_permanently unless @project.friendly_id_status.best?
+    end

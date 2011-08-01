@@ -12,6 +12,7 @@
 class Tag < ActiveRecord::Base
   has_and_belongs_to_many :posts
   attr_accessible :tag_name
+  has_friendly_id :tag_name, :use_slug => true
   
   validates :tag_name,  :uniqueness => { :case_sensitive => false }
   validates :tag_name, :presence => true

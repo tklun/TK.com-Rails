@@ -1,6 +1,7 @@
 class TagsController < ApplicationController
   before_filter :authenticate_user!, :except => [:show, :index]
-
+  before_filter :fetch_tag, :only => :show
+  before_filter :ensure_current_tag_url, :only => :show
   def index #Show all Tags
     @title = "Tags"
     @tags = Tag.all
@@ -53,3 +54,12 @@ class TagsController < ApplicationController
     redirect_to '/tags'
   end
 end
+
+private
+    def fetch_tag
+      @tag = Tag.find(params[:id])
+    end
+
+    def ensure_current_tag_url
+      redirect_to @tag, :status => :moved_permanently unless @tag.friendly_id_status.best?
+    end

@@ -19,5 +19,6 @@ class Project < ActiveRecord::Base
   validates :headline, :presence => true
   validates :details, :presence => true
   validates :role, :presence => true
+  has_friendly_id :headline, :use_slug => true
 
 end
