@@ -426,8 +426,8 @@ body #container #main
 body #container #main aside
 {
 	width:184px;
-	position:relative; /* scrolled class style*/
-	top:0px; /* scrolled class style*/
+	position:relative;
+	top:0px;
 	float:left;
 	background-color:rgba(39,124,176,1);
 	border-right:1px solid #ccc9c6;
@@ -435,8 +435,8 @@ body #container #main aside
 
 html.scroll body #container #main aside
 {
-	position:fixed; /* scrolled class style*/
-	top:185px; /* scrolled class style*/
+	position:fixed;
+	top:185px;
 }
 
 body #container #main aside h2
@@ -804,12 +804,14 @@ body #container #main section#posts-content
 	height:100%;
 }
 
+body #container #main section#tags-list h2,
 body #container #main section#posts-list h2,
 body #container #main section#post h2
 {
 
 }
 
+body #container #main section#tags-list ul,
 body #container #main section#posts-list ul,
 body #container #main section#post ul
 {
@@ -817,6 +819,7 @@ body #container #main section#post ul
 	margin:0;
 }
 
+body #container #main section#tags-list ul #post-tags,
 body #container #main section#posts-list ul #post-tags,
 body #container #main section#post ul #post-tags
 {
@@ -824,12 +827,14 @@ body #container #main section#post ul #post-tags
 	line-height:19px;
 }
 
+body #container #main section#tags-list #post-tags li,
 body #container #main section#posts-list #post-tags li,
 body #container #main section#post #post-tags li
 {
 	display:inline;
 }
 
+body #container #main section#tags-list ul li.post,
 body #container #main section#posts-list ul li.post,
 body #container #main section#post ul li.post
 {
@@ -838,6 +843,7 @@ body #container #main section#post ul li.post
 	line-height:29px;
 }
 
+body #container #main section#tags-list ul li.post:first-child,
 body #container #main section#posts-list ul li.post:first-child,
 body #container #main section#post ul li.post:first-child
 {

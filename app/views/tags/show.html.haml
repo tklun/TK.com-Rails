@@ -5,5 +5,4 @@
 		%h1= @tag.tag_name
 		%ul
 			- @tag.posts.each do |post|
-				%li
-					= render(:partial => "posts/posts_list", :locals => {:post => post})
+				= render(:partial => "posts/posts_list", :locals => {:post => post})
