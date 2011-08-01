@@ -1,7 +1,7 @@
 .col-item
 	%h3 Blog
 	%ul
-		- @posts.each do |post|
+		- @sidebarPosts.each do |post|
 			%li
 				= link_to post.headline, post
 .col-item

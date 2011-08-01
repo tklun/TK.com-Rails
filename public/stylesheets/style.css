@@ -584,7 +584,7 @@ body #container #main section#content
 
 body.posts-long #container #main section#content
 {
-	height:100%;
+
 }
 
 html.scroll body #container #main section#content
@@ -605,12 +605,12 @@ body #container #main section#content .side-col
 {
 	width:184px;
 	height:100%;
+	border-right:1px solid #ccc9c6;
 }
 
 body #container #main section#content .main-col
 {
 	width:514px;
-	border-left:1px solid #ccc9c6;
 	padding:20px 20px 54px 20px;
 	margin-left:0;
 }
@@ -799,7 +799,8 @@ body #container #main section#home-posts ul#top-posts li .post-content
 }
 
 /* Blog Page Styles (Home#posts) */
-body #container #main section#posts-content
+body #container #main section#posts-content,
+body #container #main section#tags-content
 {
 	height:100%;
 }

@@ -2,7 +2,8 @@
 	%section#tags-sidebar.side-col
 		= render(:partial => "posts/posts_sidebar")
 	%section#tags-list.main-col
-		%h1= @tag.tag_name
+		%h1= @tagname
 		%ul
-			- @tag.posts.each do |post|
+			- @tagposts.each do |post|
 				= render(:partial => "posts/posts_list", :locals => {:post => post})
+			= will_paginate @tagposts
