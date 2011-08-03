@@ -24,7 +24,7 @@ class Post < ActiveRecord::Base
   validates :headline, :presence => true
   validates :content, :presence => true
   
-  markdownize! :content
+  markdownize! :content, :line_numbers => :table
   
   # def self.find_by_date(year, month)
   #   conditions = []
