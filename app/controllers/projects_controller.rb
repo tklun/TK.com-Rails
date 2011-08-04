@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
   before_filter :ensure_current_project_url, :only => :show
   def index #Show all projects
     @title = "Portfolio"
-    @projects = Project.limit(10).order("created_at ASC") # Limiting to 10.  Pagination needed if this goes further
+    @projects = Project.limit(10).order("created_at DESC") # Limiting to 10.  Pagination needed if this goes further
     @class = "work"
   end
 
