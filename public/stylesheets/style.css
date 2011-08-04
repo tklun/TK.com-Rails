@@ -1072,7 +1072,7 @@ div.grid
 @font-face {
 	font-family: 'AllerRegular';
 	src: url('_res/fonts/aller_rg-webfont.eot');
-	src: local('Aller'), local('Aller'), url('../fonts/Aller_Rg.ttf') format('ttf'), url('http://www.tomklun.com/_res/fonts/aller_rg-webfont.svg#webfont36YIhrgZ') format('svg');
+	src: local('Aller'), local('Aller'), url('../fonts/Aller_Rg.ttf') format('truetype'); /*url('http://www.tomklun.com/_res/fonts/aller_rg-webfont.svg#webfont36YIhrgZ') format('svg')*/
 	font-weight: normal;
 	font-style: normal;
 }
@@ -1080,7 +1080,7 @@ div.grid
 @font-face {
 	font-family: 'AllerLightRegular';
 	src: url('_res/fonts/aller_lt-webfont.eot');
-	src: local('Aller Light'), local('AllerLight'), url('../fonts/Aller_Lt.ttf') format('ttf'), url('http://www.tomklun.com/_res/fonts/aller_lt-webfont.svg#webfontF5zYUX6p') format('svg');
+	src: local('Aller Light'), local('AllerLight'), url('../fonts/Aller_Lt.ttf') format('truetype'), url('http://www.tomklun.com/_res/fonts/aller_lt-webfont.svg#webfontF5zYUX6p') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -1096,7 +1096,7 @@ div.grid
 @font-face {
 	font-family: 'AllerBold';
 	src: url('_res/fonts/aller_bd-webfont.eot');
-	src: local('Aller'), local('AllerBold'), url('../fonts/Aller_Bd.ttf') format('ttf'), url('http://www.tomklun.com/_res/fonts/aller_bd-webfont.svg#webfontefQ9VvJD') format('svg');
+	src: local('Aller'), local('AllerBold'), url('../fonts/Aller_Bd.ttf') format('ttf'); /*url('http://www.tomklun.com/_res/fonts/aller_bd-webfont.svg#webfontefQ9VvJD') format('svg')*/
 	font-weight: normal;
 	font-style: normal;
 }
