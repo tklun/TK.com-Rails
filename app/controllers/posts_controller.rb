@@ -7,7 +7,9 @@ class PostsController < ApplicationController
     @title = "Posts"
     @class = "posts"
     @posts = Post.paginate( :all, :per_page => 3, :page => params[:page],:order => "created_at DESC" )
-    @sidebarPosts = Post.paginate( :all, :per_page => 10, :page => params[:page],:order => "created_at DESC" )
+    # @sidebarPosts = Post.paginate( :all, :per_page => 10, :page => params[:page],:order => "created_at DESC" )
+    @sidebarPosts = Post.limit(10).order("created_at DESC")
+
   end
 
   def show #Show individual posts
