@@ -26,8 +26,9 @@ var postScroll = function() {
 
 var lastFM = {
 	toggle : function(fmContent) {
-		$(".last-fm a, #last-fm").click(function(event) {
+		$(".last-fm a").click(function(event) {
 			event.preventDefault();
+			$(this).toggleClass("active");
 			$(fmContent).fadeToggle();
 		});
 	}

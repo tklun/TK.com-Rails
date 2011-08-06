@@ -511,6 +511,11 @@ body #container #main aside #social-networks li.last-fm a
 
 }
 
+body #container #main aside #social-networks li.last-fm a.active {
+	text-decoration:underline;
+	font-weight:bold;
+}
+
 body #container #main aside #social-networks li.github a
 {
 /*	background:transparent url(../i/icons/github.png) 100% 50% no-repeat;
@@ -535,6 +540,15 @@ body #container #main aside #social-networks #last-fm
 body #container #main aside #social-networks #last-fm h4
 {
 	font-size:14px;
+	line-height:14px;
+}
+
+body #container #main aside #social-networks #last-fm h4 a
+{
+	font-weight:normal;
+	float: right;
+	font-size:12px;
+	color: rgb(255,255,255);
 }
 
 body #container #main aside #social-networks #last-fm h5
@@ -876,6 +890,12 @@ body #container #main section#posts-list ul li.post:first-child,
 body #container #main section#post ul li.post:first-child
 {
 	padding-top:30px;
+}
+
+#tags-list .pagination,
+#posts-list .pagination
+{
+	padding-top:10px;
 }
 
 /**** INDIVIDUAL POST STYLES ****/
