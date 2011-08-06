@@ -2,10 +2,13 @@
 	- if track['image'][0]["#text"] != ""
 		%img{:src => track['image'][0]["#text"]}
 	- else
-		
+		%img{:src => "/i/noartwork.gif"}
 	%p
 		%span= track['artist']['#text']
 		%span -
 		%span= track['name']
-		%br	
-		%span.date #{time_ago_in_words(track['date']['#text'])} ago
+		%br
+		-if track['date'] != nil
+			%span.date #{time_ago_in_words(track['date']['#text'])} ago
+		-else track["@attr"]["nowplaying"] == "true"
+			%span.now-playing Now Playing

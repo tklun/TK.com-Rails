@@ -568,6 +568,12 @@ body #container #main aside #social-networks #last-fm li p
 	padding:0;
 }
 
+body #container #main aside #social-networks #last-fm li span.now-playing
+{
+	padding-left:15px;
+	background: transparent url("../i/icons/nowplaying.gif") -65px 0 no-repeat;
+}
+
 body #container #main section#content
 {
 	float:left;
