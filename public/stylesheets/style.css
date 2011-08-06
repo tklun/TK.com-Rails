@@ -373,7 +373,7 @@ body #container section#contact #message
 	padding:5px;
 }
 
-body #container section#contact a,
+body #container section#contact input[type=button],
 body #container section#contact input[type=submit]
 {
 	color:#fff;
@@ -389,7 +389,7 @@ body #container section#contact input[type=submit]
 }
 
 body #container section#contact #contact_message_submit,
-body #container section#contact a#cancel
+body #container section#contact #cancel
 {
 	background-image:url("../i/embed/button-bg-sprite.jpg");
 }
@@ -404,7 +404,7 @@ body #container section#contact #contact_message_submit
 	background-repeat: repeat-x;
 }
 
-body #container section#contact a#cancel
+body #container section#contact #cancel
 {
 	position:relative;
 	background-color:#707A79;
