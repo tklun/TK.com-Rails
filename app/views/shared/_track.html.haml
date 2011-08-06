@@ -6,7 +6,7 @@
 	%p
 		%span= track['artist']['#text']
 		%span -
-		%span= track['name']
+		%span= track['name'].truncate(35)
 		%br
 		-if track['date'] != nil
 			%span.date #{time_ago_in_words(track['date']['#text'])} ago
