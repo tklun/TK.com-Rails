@@ -1,6 +1,6 @@
 %li{:class => "#{'single-' if defined? single}post", :id => "post-#{post.id}"}
 	%h2= link_to post.headline, post
-	%ul#post-tags
+	.post-tags
 		%span Posted #{time_ago_in_words(post.created_at)} ago in
 		%span.tags= tags(post)
 	.post-content

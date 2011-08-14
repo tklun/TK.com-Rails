@@ -2,26 +2,27 @@
 	%a.close{:href => '#close'} X
 	%p.instruction
 		If you're interested in more information or web site development, send me a note with the form below.
-	= form_for @contact_message, :as => :contact_message, :url => { :controller => "/contact_messages", :action => :create }, :remote => true do |f|                      
-		%legend.ir Contact Form
-		%ul
-			%li.name
-				%div
-					= f.label :email
-					= f.text_field :email
-				%p.error *Name Required
-			%li.email
-				%div
-					= f.label :subject
-					= f.text_field :subject
-				%p.error *E-mail Required
-			%li.message
-				%div
-				= f.label :message
-				%p.error *Message Required
-				= f.text_area :body, :rows => 10
+	= form_for @contact_message, :as => :contact_message, :url => { :controller => "/contact_messages", :action => :create }, :remote => true do |f|
+		%fieldset
+			%legend.ir Contact Form
+			%ul
+				%li.name
+					%div
+						= f.label :email
+						= f.text_field :email
+					%p.error *Name Required
+				%li.email
+					%div
+						= f.label :subject
+						= f.text_field :subject
+					%p.error *E-mail Required
+				%li.message
+					%div
+					= f.label :message
+					%p.error *Message Required
+					= f.text_area :body, :rows => 10
 				
-			= f.submit "Send Message"
+				= f.submit "Send Message"
 			
-			%input#cancel.cancel-close{:href => '#cancel', :type => 'button', :value => "Cancel"}
-		#result.success
+				%input#cancel.cancel-close{:href => '#cancel', :type => 'button', :value => "Cancel"}
+			#result.success

@@ -1,5 +1,5 @@
 %h2= link_to post.headline, post
-#post-tags
+.post-tags
 	%span Posted #{time_ago_in_words(post.created_at)} ago in
 	%span.tags= tags(post)
 .post-content
