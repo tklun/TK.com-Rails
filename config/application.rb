@@ -13,6 +13,10 @@ module TKComRails
     config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
     config.action_view.javascript_expansions[:cdn] = %w(https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js rails)
 
+    if Rails.env == "production"
+      config.middleware.use("Rack::GoogleAnalytics", :web_property_id =&gt; "UA-10974374-1")
+    end
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -37,7 +41,6 @@ module TKComRails
 
     # JavaScript files you want as :defaults (application.js is always included).
     # config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
-
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 

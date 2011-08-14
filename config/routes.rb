@@ -14,6 +14,9 @@ TKComRails::Application.routes.draw do
   match "archive/:year(/:month(/:day))" => "posts#archive", :constraints => { :year => /\d{4}/, :month => /\d{2}/, :day => /\d{2}/ }    
     # match 'work', :to  => 'projects#index'
 
+  get 'sitemap', :to => 'sitemap#show'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

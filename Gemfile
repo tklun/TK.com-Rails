@@ -19,6 +19,10 @@ gem 'jammit'
 gem 'rake'
 gem "friendly_id", "~> 3.2.1"
 
+group :production do
+	gem 'rack-google_analytics', :require => "rack/google_analytics"
+end
+
 group :development do
 	gem 'rspec-rails', '2.5.0'
 	gem 'annotate', '2.4.0'
