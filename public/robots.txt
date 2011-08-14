@@ -3,4 +3,16 @@
 # To ban all spiders from the entire site uncomment the next two lines:
 # User-Agent: *
 # Disallow: /
+User-agent: *
+Allow: /
+Disallow: /braines/
+Disallow: /cdd/
+Disallow: /piraje/
+Disallow: /greybox/
+Disallow: /hallucidate/
+Disallow: /cms/
+Disallow: /files/
+Disallow: /mobile/
+Disallow: /remote/
+
 Sitemap: http://www.tomklun.com/sitemap.xml
