@@ -1,8 +1,8 @@
 %li
 	- if track['image'][0]["#text"] != ""
-		%img{:src => track['image'][0]["#text"]}
+		%img{:src => track['image'][0]["#text"], :alt => track['album']["#text"]}
 	- else
-		%img{:src => "/i/noartwork.gif"}
+		%img{:src => "/i/noartwork.gif", :alt => "No artwork available"}
 	%p
 		%span= track['artist']['#text']
 		%span -
