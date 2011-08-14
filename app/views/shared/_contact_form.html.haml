@@ -18,11 +18,11 @@
 					%p.error *E-mail Required
 				%li.message
 					%div
-					= f.label :message
+					= f.label :body
 					%p.error *Message Required
 					= f.text_area :body, :rows => 10
 				
-				= f.submit "Send Message"
+					= f.submit "Send Message"
 			
-				%input#cancel.cancel-close{:href => '#cancel', :type => 'button', :value => "Cancel"}
+					%input#cancel.cancel-close{:type => 'button', :value => "Cancel"}
 			#result.success
