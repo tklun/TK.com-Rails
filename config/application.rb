@@ -14,7 +14,7 @@ module TKComRails
     config.action_view.javascript_expansions[:cdn] = %w(https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js rails)
 
     if Rails.env == "production"
-      config.middleware.use("Rack::GoogleAnalytics", :web_property_id =&gt; "UA-10974374-1")
+      config.middleware.use("Rack::GoogleAnalytics", :web_property_id => "UA-10974374-1")
     end
 
     # Settings in config/environments/* take precedence over those specified here.
