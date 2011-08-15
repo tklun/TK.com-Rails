@@ -365,7 +365,7 @@ body #container section#contact input
 	width:205px;
 }
 
-body #container section#contact #message
+body #container section#contact .message textarea
 {
 	margin-bottom:30px;
 	width:315px;
