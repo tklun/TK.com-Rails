@@ -20,6 +20,7 @@ module ApplicationHelper
   
   def recent_tracks
     @tracks = Track.get_all_tracks
+    @tracks = @tracks.slice(0,6)
   end
   
 end
