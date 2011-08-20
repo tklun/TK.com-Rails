@@ -58,12 +58,14 @@
 							%h4
 								%span last.fm recent tracks
 								%a{:href => "http://www.last.fm/user/musicnvrstops"} See all&hellip;
+							/ googleoff: all
 							.recent-tracks
 								%h5 Recent Tracks
 								%ol
 									- recent_tracks
 									- @tracks.each do |track|
 										= render(:partial => "shared/track", :locals => {:track => track})
+							/ googleon: all
 				%section#content
 					= yield
 			-# #fixed-buffer-bottom
