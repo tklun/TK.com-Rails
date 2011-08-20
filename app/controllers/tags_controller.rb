@@ -11,6 +11,7 @@ class TagsController < ApplicationController
   def show #Show individual Tag
     @tag = Tag.find(params[:id])
     @tagname = @tag.tag_name
+    @title = @tagname
     @posts = @tag.posts
     @tagposts = @posts.paginate( :all, :per_page => 3, :page => params[:page],:order => "created_at DESC" )
     @sidebarPosts = Post.paginate( :all, :per_page => 10, :page => params[:page],:order => "created_at DESC" )
