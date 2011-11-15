@@ -7,7 +7,7 @@ gem 'will_paginate', '3.0.pre2'
 
 # Authentication Gems
 gem 'devise'
-gem "cancan"
+gem 'cancan'
 
 # Code Helpers
 gem 'haml'
