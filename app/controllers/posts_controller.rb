@@ -16,7 +16,8 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @title = @post.headline
     @class = "posts-long"
-    @sidebarPosts = Post.paginate( :all, :per_page => 5, :page => params[:page],:order => "created_at DESC" )
+    #@sidebarPosts = Post.paginate( :all, :per_page => 5, :page => params[:page],:order => "created_at DESC" )
+    @sidebarPosts = Post.limit(5).order("created_at DESC")
   end
   
   def archive #Show archive
