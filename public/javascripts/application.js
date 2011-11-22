@@ -2,6 +2,7 @@
 // This file is automatically included by javascript_include_tag :defaults
 $(document).ready(function() {
 	postScroll();
+	changeOffset();
 	lastFM.toggle("#last-fm");
 	contactForm.showForm("#contact");
 	$('#contact_message_submit').click(function() {
@@ -22,6 +23,21 @@ var postScroll = function() {
 			};
 		});
 	};
+};
+
+var calculateBottomOffset = function() {
+	var contentHeight = 739;
+	var offset = 	window.innerHeight - contentHeight;
+	return offset;
+};
+
+var changeOffset = function() {
+	var contentArea = $("#post");
+	$(window).resize(function() {
+		var bottomPadding = calculateBottomOffset();
+		contentArea.css('padding-bottom', bottomPadding.toString + 'px');
+		console.log(bottomPadding);
+	});
 };
 
 var lastFM = {
