@@ -21,6 +21,7 @@ gem "friendly_id", "~> 3.2.1"
 
 group :production do
 	gem 'rack-google_analytics', :require => "rack/google_analytics"
+	gem 'newrelic_rpm'
 end
 
 group :development do
