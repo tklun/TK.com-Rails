@@ -8,7 +8,7 @@ class PostsController < ApplicationController
     @class = "posts"
     @posts = Post.paginate( :all, :per_page => 3, :page => params[:page],:order => "created_at DESC" )
     # @sidebarPosts = Post.paginate( :all, :per_page => 10, :page => params[:page],:order => "created_at DESC" )
-    @sidebarPosts = Post.limit(10).order("created_at DESC")
+    @sidebarPosts = Post.limit(5).order("created_at DESC")
 
   end
 
@@ -16,7 +16,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @title = @post.headline
     @class = "posts-long"
-    @sidebarPosts = Post.paginate( :all, :per_page => 10, :page => params[:page],:order => "created_at DESC" )
+    @sidebarPosts = Post.paginate( :all, :per_page => 5, :page => params[:page],:order => "created_at DESC" )
   end
   
   def archive #Show archive
@@ -42,7 +42,7 @@ class PostsController < ApplicationController
       
       @month_posts = Post.find(:all,:order => "created_at DESC", :conditions => ["created_at >= ? and created_at < ?", start_date, end_date])
       # @post_months = @posts.group_by { |t| t.created_at.beginning_of_month }   
-    @sidebarPosts = Post.paginate( :all, :per_page => 10, :page => params[:page],:order => "created_at DESC" )
+    @sidebarPosts = Post.paginate( :all, :per_page => 5, :page => params[:page],:order => "created_at DESC" )
   end
   
   def new
