@@ -3,6 +3,7 @@
 $(document).ready(function() {
 	postScroll();
 	changeOffset();
+	setOffset();
 	lastFM.toggle("#last-fm");
 	contactForm.showForm("#contact");
 	$('#contact_message_submit').click(function() {
@@ -31,12 +32,17 @@ var calculateBottomOffset = function() {
 	return offset;
 };
 
+var setOffset = function() {
+	var contentArea = $("#post");
+	var bottomPadding = calculateBottomOffset();
+	contentArea.css('padding-bottom', bottomPadding.toString() + 'px');
+	console.log(bottomPadding);
+}
+
 var changeOffset = function() {
 	var contentArea = $("#post");
 	$(window).resize(function() {
-		var bottomPadding = calculateBottomOffset();
-		contentArea.css('padding-bottom', bottomPadding.toString + 'px');
-		console.log(bottomPadding);
+		setOffset();
 	});
 };
 
