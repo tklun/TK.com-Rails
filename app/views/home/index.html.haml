@@ -1,7 +1,17 @@
 %section#home-content
 	%section#home-about
 		%h1 About Me
-		%p I'm a Chicago-based web developer, currently working as a Sr. Developer at Critical Mass where I specialize in developing web sites for a variety of clients. I'm an experienced front-end developer with expertise in the latest development technologies including HTML5, CSS3, JavaScript and jQuery, and web site optimization.
+		%p{:itemscope => "", :itemtype => "http://data-vocabulary.org/Person"}
+			%meta{:content => "Tom Klun", :itemprop => "name"}>/
+			I'm a
+			= succeed "-based" do
+				%span{:itemprop => "address", :itemscope => "", :itemtype => "http://data-vocabulary.org/Address"}
+					%span{:itemprop => "locality"} Chicago
+			= succeed "," do
+				%span{:itemprop => "role"} web developer
+			currently working as a
+			%span{:itemprop => "title"} Sr. Developer
+			at Critical Mass where I specialize in developing web sites for a variety of clients. I'm an experienced front-end developer with expertise in the latest development technologies including HTML5, CSS3, JavaScript and jQuery, and web site optimization.
 	%section#home-work
 		%h1
 			%span Work

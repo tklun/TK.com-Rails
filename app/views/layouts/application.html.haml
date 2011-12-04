@@ -16,7 +16,6 @@
 		/[if IE] 
 		/[if lt IE 7 ] <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		%meta{:content => "Tom Klun is a Chicago-based web developer with expertise in site development using HTML5, CSS3, JavaScript, and a variety of different Web technologies.", :name => "description"}
-		%meta{:content => "tom klun, web developer, web development, chicago, html html5 css css3 javascript jquery .net eclipse standards development cms work portfolio contact about", :name => "keywords"}
 		%meta{:content => "Tom Klun", :name => "author"}
 		%link{:href => "/favicon.ico", :rel => "shortcut icon"}
 
@@ -28,9 +27,9 @@
 			%header.clearfix
 				%a{:href => "/"}
 					%h1.ir Tom Klun - Web Developer
-				%h2
-					Tom Klun |
-					%span.subhead Web Developer
+				%h2{:itemscope => "", :itemtype => "http://data-vocabulary.org/Person"}
+					%span{:itemprop => "name"}Tom Klun |
+					%span.subhead{:itemprop => "role"} Web Developer
 				%nav
 					%ul.clearfix
 						%li
@@ -42,10 +41,10 @@
 				= render(:partial => "shared/contact_form")
 			#main.clearfix
 				%aside
-					%h2
-						Tom Klun
+					%h2{:itemscope => "", :itemtype => "http://data-vocabulary.org/Person"}
+						%span{:itemprop => "name"}Tom Klun
 						%br
-						%span.subhead Web Developer
+						%span.subhead{:itemprop => "role"} Web Developer
 					%section#social-networks
 						%ul
 							%li.linkedin
@@ -75,4 +74,4 @@
 			#x1020
 			#x1200y275
 		= include_javascripts :workspace
-		= debug(params) if Rails.env.development?
+		-# = debug(params) if Rails.env.development?
