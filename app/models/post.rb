@@ -20,7 +20,7 @@ class Post < ActiveRecord::Base
     :styles => {
       :thumb => "100x100",
       :medium => "200x200",
-      :large => "450x290",
+      :large => "514>x290",
     },
     :s3_credentials => S3_CREDENTIALS,
     :storage => :s3,
