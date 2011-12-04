@@ -5,4 +5,9 @@
 .post-content
 	- if post.image_path != ""
 		=image_tag("../i/post-images/cupcake.jpg")
+	- if post.photo != ""
+		=image_tag post.photo.url
+		=image_tag post.photo.url(:medium)
+		=image_tag post.photo(:thumb)
+		=image_tag post.photo(:large)
 	!= post.rendered_content

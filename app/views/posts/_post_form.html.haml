@@ -1,4 +1,4 @@
-= form_for(@post) do |p|
+= form_for(@post,:html => { :multipart => true }) do |p|
 	= render 'shared/error_messages', :object => p.object
 	.field
 		= p.label :headline
@@ -8,10 +8,16 @@
 		= p.label :content
 		%br
 		= p.text_area :content
+	/ .field
+	/ 	= p.label :image_path
+
+	/ 	%br
+	/ 	= p.text_field :image_path
 	.field
-		= p.label :image_path
+		= p.label :photo
+
 		%br
-		= p.text_field :image_path
+		= p.file_field :photo
 	.field
 		= p.label :tag
 		%br

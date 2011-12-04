@@ -19,6 +19,10 @@ gem 'jammit'
 gem 'rake'
 gem "friendly_id", "~> 3.2.1"
 
+gem 'paperclip'
+gem 'aws-s3'
+gem 'rmagick'
+
 group :production do
 	gem 'rack-google_analytics', :require => "rack/google_analytics"
 	gem 'newrelic_rpm'
