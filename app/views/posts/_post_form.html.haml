@@ -9,15 +9,20 @@
 		%br
 		= p.text_area :content
 	/ .field
-	/ 	= p.label :image_path
-
+	/ 	= p.label :photo
 	/ 	%br
-	/ 	= p.text_field :image_path
+	/ 	= p.file_field :photo
 	.field
-		= p.label :photo
-
-		%br
-		= p.file_field :photo
+		= p.fields_for :assets do |asset|
+			- if asset.object.new_record?
+				= asset.file_field :photo
+	.field
+		- p.fields_for :assets do |asset|
+			- unless asset.object.new_record?
+				.thumbnail
+					= link_to(image_tag(asset.object.photo.url(:thumb)), asset.object.photo.url(:original))
+					= asset.label :_destroy, 'Remove:'
+					= asset.check_box :_destroy
 	.field
 		= p.label :tag
 		%br

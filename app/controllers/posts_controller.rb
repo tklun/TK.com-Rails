@@ -50,6 +50,7 @@ class PostsController < ApplicationController
     @post = Post.new
     @title = "New Post"
     get_all_tags
+    5.times { @post.assets.build }
   end
 
   def create
@@ -73,6 +74,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @title = "Edit Post"
     get_all_tags
+    5.times { @post.assets.build }
   end
   
   def update

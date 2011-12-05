@@ -10,7 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111203202226) do
+ActiveRecord::Schema.define(:version => 20111204211006) do
+
+  create_table "assets", :force => true do |t|
+    t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+  end
 
   create_table "posts", :force => true do |t|
     t.string   "headline"
@@ -20,10 +29,6 @@ ActiveRecord::Schema.define(:version => 20111203202226) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "rendered_content"
-    t.string   "photo_file_name"
-    t.string   "photo_content_type"
-    t.integer  "photo_file_size"
-    t.datetime "photo_updated_at"
   end
 
   create_table "posts_tags", :id => false, :force => true do |t|

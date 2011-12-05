@@ -14,19 +14,15 @@
 
 class Post < ActiveRecord::Base
   has_and_belongs_to_many :tags
+  
+  has_many :assets, :dependent => :destroy
+  accepts_nested_attributes_for :assets, :allow_destroy => true
+
   # use the "title" column as the basis of the friendly_id, and use slugs
   has_friendly_id :headline, :use_slug => true
-  has_attached_file :photo, 
-    :styles => {
-      :thumb => "100x100",
-      :medium => "200x200",
-      :large => "514>x290",
-    },
-    :s3_credentials => S3_CREDENTIALS,
-    :storage => :s3,
-    :path => ":attachment/:id/:style.:extension"
   
-  attr_accessible :headline, :content, :image_path, :post_tag, :tag_list, :photo, :photo_file_name, :photo_content_type, :photo_file_size, :photo_updated_at
+  attr_accessible :headline, :content, :image_path, :post_tag, :tag_list, :assets_attributes
+  
   attr_accessor :tag_list
   after_save :update_tags
   
