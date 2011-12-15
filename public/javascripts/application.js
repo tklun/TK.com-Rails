@@ -4,11 +4,11 @@ $(document).ready(function() {
 	postScroll();
 	changeOffset();
 	setOffset();
+	imageGallery.init();
 	lastFM.toggle("#last-fm");
 	contactForm.showForm("#contact");
 	$('#contact_message_submit').click(function() {
-    // $("#result").html("<img src='images/loading.gif' />");
-  });
+  	});
 });
 
 var postScroll = function() {
@@ -54,6 +54,20 @@ var lastFM = {
 			$(fmContent).fadeToggle();
 		});
 	}
+};
+
+var imageGallery = {
+	init : function() {
+		var numOfImages = $('#slider img').length;
+		if (numOfImages > 1) {
+			$('#slider').nivoSlider({
+				effect: 'sliceDownLeft', // Specify sets like: 'fold,fade,sliceDown'
+				slices: 25, // For slice animations
+				pauseTime: 5000, // How long each slide will show
+				controlNav: false, // 1,2,3... navigation
+			});	
+		}
+	}	
 };
 
 var contactForm = {

@@ -17,6 +17,7 @@ javascripts:
     # - public/javascripts/lib/set.js
     # - public/javascripts/lib/*.js
     - public/javascripts/modernizr.min.js
+    - public/javascripts/jquery.nivo.slider.pack.js
     - public/javascripts/application.js
     - public/javascripts/rails.js
     # - app/views/jst/workspace/*.jst

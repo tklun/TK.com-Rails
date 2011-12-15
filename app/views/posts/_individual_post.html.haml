@@ -4,6 +4,7 @@
 	%span.tags= tags(post)
 .post-content
 	- unless post.assets.nil? || post.assets.count == 0
-		- post.assets.each do |asset|
-			= link_to(image_tag(asset.photo.url(:medium)), asset.photo.url(:original))
+		#slider.nivoSlider
+			- post.assets.each do |asset|
+				=image_tag(asset.photo.url(:medium))
 	!= post.rendered_content
